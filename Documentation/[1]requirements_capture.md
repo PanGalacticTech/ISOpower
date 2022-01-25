@@ -24,18 +24,26 @@ information provided can be tailored to project complexity_
 > Estimated power requirements set out in sub-system specification below.
 
 
-#### Optional Features
-_Any features or functions that are optional should be stated here_  <br>
->  1. Report Status & current usage for sustainabilty and maintainance purposes.
->  2. Individual remote control of channel power.
->  3. Use only connection types that can be operated with one hand. i.e. avoid screw terminals.
-
-
 #### Sub-Systems Specifications
-_Specific requirements for subsystems should be documented at this stage_    <br>
+##### Power Requirements
+_Specific requirements for subsystems can be documented at this stage_    <br>
 > a. steady power usage of 20W 1.7A at 12V (Maxxon AMax 32 236668 Graphite brushes, 20 Watt)[Estimated value, may change in future iterations] <br>
 > b. peak power usage of 69W 5.7A at 12V (when motor stalled)  [Estimated value, may change in future iterations] <br>
 > c. 5V power for the Raspberry pis, typically 2.5A per Raspberry Pi; four raspberry pi connections, 1 connection for power to microcontroller monitoring chip. <br>
+
+##### Interface Requirements
+> d. User interaction with system should be via JSON formatted commands with the ability to both poll specific data, and actuate switches.
+> e. The system should report its status once per second. Minimum data for status update includes:
+>    1. Current sensor readiings for 5v & 12v bus
+>    2. Time since last reset in seconds. (Hint: Record number of times millis() rollsover) Integer should be able to record times >10 years (314496000 seconds)
+> f. Any network communication should use TCP protocol, on port 443 to avoid firewall conflicts.
+> g. Off nominal voltage detection should trigger a JSON message to be sent to the user. This reporting should be rate limited to avoid a single fault sending spam.
+> h. System should track, and allow to be queried remotly:
+>    1. How many times has the voltage tripped for out of spec performance
+>    2. The last recorded time of a voltage fault
+>    3. Include method for resetting count to 0 after fault has been rectified.
+ 
+
 
 #### General Specifications/Requirements
 _These specifications are going to be valid for most projects developed using this framework_
@@ -43,11 +51,21 @@ _These specifications are going to be valid for most projects developed using th
 > 5. Circuit should be fuse protected <br>
 > 6. 5v bus should be protected from over voltage conditions.
 
+
+#### Optional Features
+_Any features or functions that are optional should be stated here_  <br>
+>  1. Report Status & current usage for sustainabilty and maintainance purposes.
+>  2. Individual remote control of channel power.
+>  3. Use only connection types that can be operated with one hand. i.e. avoid screw terminals.
+
 #### Design Optimisation
 _What parameters of the design should be minimised/maximised?_
 
 #### Design Tradeoffs
 _Space for discussion and weighing up of features that may or may not be required_ <br>
+
+> If method is implemented to turn off power in the case of fault condition, provide some way of bypassing this feature
+> to assist in debugging.
 
 #### Quality Assurance 
 _What quality assurances or requirements, if any, need to be established?_
@@ -55,21 +73,7 @@ _What quality assurances or requirements, if any, need to be established?_
 #### Notes
 _Any Extra Notes?_
 Software Reqirements: 
-JSON commands/interaction with microcontroller -> actuating commands & reporting Status.
-reporting of status 1 per second.  Minimum include current for 5v bus & 12v bus, time since last reset - as integer Not float. (keep track of number of times millis() rollsover)
-value good for 10 years. 
 
-443 TCP 
-
-Whenever voltage out of spec log on controller, send message via json, LIMIT MESSAGE RATE. query data remotly, how many time tripped, last time tripped. way to reset count?
-
-
-Break in auto detect line to or gates so can be easily disabled.
-
-
-DC power Supplies fault output. use for visual indication lEDs & report via JSON.
-
-https://github.com/dpreid/pidui/issues/5
 
 
 
