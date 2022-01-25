@@ -161,6 +161,8 @@ low voltage at anything >4v seemed to fail. It also did not perform well with of
 
 > DC/DC supply can indicate an off nominal voltage rail by pulling a logic HIGH to ground. This can be monitored by the MCU and set error LEDs. This will also enable easy 
 > reporting & monitoring of power status.
+> Can be used for visual indication lEDs & report via JSON.
+
 
 ---
 
@@ -213,7 +215,12 @@ _Exploration of software, firmware and development tools that might be used to m
 - Raspberry pi requires script to place data received over COM port into web accessable format. 
 
 
+#### Option C
 
+- Arduino running state machine framework
+- [Interfacing using JSON formatted data](https://github.com/dpreid/pidui/issues/5)
+- concurrently taking analogRead() of 2 ADC inputs, and sending to client as JSON formatted data.
+- Ties into existing infrastructre
 
 
 
