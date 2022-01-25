@@ -92,28 +92,34 @@ and causing damage. Several possible approaches will be discussed below_
 >  
 > **Use Case**
 > [TI TL431 for Under & Overvoltage Detection]( https://www.ti.com/lit/an/slva987a/slva987a.pdf?ts=1642107195143&ref_url=https%253A%252F%252Fwww.google.com%252F)[^uvov]
-> In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431] NOTE: Output from LT431 is INVERTED. NOT gate required on
-> output for correction.
+> In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431] 
 
-Resistor Values Estimated:
-> R1: 470k      <br>
-> R2: 560k      <br>
-> Vhigh ~ 5.5v   <br>
+> TL431 has a minimum cathode current of 1mA, so resistor selection must be checked to meet this requirement.
+
+> Resistor Values Estimated:
+> R1: 470r      <br>
+> R2: 560r     <br>
+> Vhigh ~ 5.47v   <br>
 > <br>
-> R3: 560k   <br>
-> R4: 470k   <br>
-> Vlow ~ 4.6v
+> R3: 560r   <br>
+> R4: 470r   <br>
+> Vlow ~ 4.8v
+>
+> R5 = 220r <br>
+> <br>
+> Using these values & <br> I = (Vcc - Vref)/R3 (High edge) & I = (Vcc - Vref)/R5 (Low edge) [No sure if correct best guess given forum posts & datasheet] <br>ere
+> Ika ~ 4mA for high edge & 11mA for low edge
+
 
 
 ***Implementing This Solution***
 > Requires: <br>
 > 5 * OR Gates <br>
-> 1 * NOT Gate <br>
-> <br>
+> > <br>
 > To make these gates from common gates, it would require: <br>
-> 16 * NAND Gates. (3 req for OR gate, 1 for NOT gate) <br>
+> 15 * NAND Gates. (3 req for OR gate) <br>
 > OR <br>
-> 11 * NOR Gates. (2 req for OR gate, 1 for NOT gate) <br>
+> 10 * NOR Gates. (2 req for OR gate) <br>
 > Suggest: <br> 
 > 3 * [MC74HC02ADG SMD Quad Input NOR Gate](https://uk.farnell.com/on-semiconductor/mc74hc02adg/ic-74hc-cmos-smd-74hc02-soic14/dp/9666893)
 
@@ -145,15 +151,16 @@ reason it should be independent of all other systems, and simplified as much as 
 > analog voltage level and lights up to 10 LEDs sequentially
 > Supply Voltage from 3v to 25v - Suggest it runs from 12v rail for each use case. Input can handle from 0 to 35v 
 
- 
-> "The LM3916 is extremely easy to apply. A 1.2V fullscale meter requires only one resistor in addition to
-> the ten LEDs. One more resistor programs the fullscale anywhere from 1.2V to 12V independent of
-> supply voltage. LED brightness is easily controlled
-> with a single pot."
 
-> This IC could be set such that a single mid range output lights a green LED, the bottom half of the range lights a yellow LED, and the top half of the range lights a RED led, 
-> which would provide under and over voltage indication for each voltage bus.
-> Voltage divider would be required for detection of 24v bus.
+***Assessment***
+This option did not work well, as the window for the "okay" LED was far too wide, I managed to get it to indicate high voltage at 5.5v, however getting it to register
+low voltage at anything >4v seemed to fail. It also did not perform well with off nominal supply voltage.
+
+#### Option 3
+> Use the features of the DC/DC supplies[^dcdc]
+
+> DC/DC supply can indicate an off nominal voltage rail by pulling a logic HIGH to ground. This can be monitored by the MCU and set error LEDs. This will also enable easy 
+> reporting & monitoring of power status.
 
 ---
 
@@ -161,6 +168,7 @@ reason it should be independent of all other systems, and simplified as much as 
 
 The best options for MCU seem to be either;
 [AtMega328p](https://uk.farnell.com/microchip/atmega328p-an/mcu-8bit-atmega-20mhz-tqfp-32/dp/2443178?st=ATmega328P) combined with CH340 for USB comms & programming, ISP header for programming bootloaders, and an WiFi transcever as a peripheral device, or <br>
+
 [ESP32-WROOM-32U](https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-WROOM-32UM113DH3200UH3Q0?qs=W%2FMpXkg%252BdQ4Fqx%2FReRQpFQ==&mgh=1&vip=1&gclid=CjwKCAiAxJSPBhAoEiwAeO_fPwE6kImUAnBTI5SyodKJNS7nNKTfdQ13Md3OplGP5AphD8abym4PYBoCbGkQAvD_BwE), with the same USB interface and ISP header, but without the need for an additional WiFi transcever. This has a number of advantages and disadvantages. 
 
 The major disadvantage is the ESP's requirement for 3.3v logic, this will likely require additional drivers for actuation of the MOSFET switches,
@@ -171,6 +179,16 @@ However the selection of the peripheral WiFi adaptor throws up an ironic aside, 
 as a WiFi device than sourcing dedicated WiFi transceiver modules like the ublox nina.
 The ESP32 is available with the option to connect an external antenna, which makes the system more adaptable for use
 in areas that may not have adiquate WiFi signal with the antenna obscured inside a metal box.
+
+***Conclusion***
+
+The board will use both AtMega328p to act as the hardware controller, and ESP32 to act as wifi & higher level control. This will also act as a proving ground for using 
+mixed controller boards, interfacing ESP32 with other MCUs, and potentually offering up the ability to expand the scope of the power supply module later with more advanced 
+software run on the ESP32, with the AtMega handling the lower level hardware monitoring.
+
+[Info on using ESP32 as WiFi adaptor for AtMega328p](https://icircuit.net/arduino-interfacing-arduino-uno-esp32/2134)[^esp32]
+
+
 
 ****************************************************************************************************************************
 
@@ -276,3 +294,8 @@ _Assuming That_
 [^tl431]: Voltage Window Calculations: <br>
           - Vh=(1+(R2/R)1)*Vref   <br>
           - Vl=(1+(R4/R3))*Vref
+
+[^dcdc]: [i6a4w_spec](https://product.tdk.com/en/system/files?file=dam/doc/product/power/switching-power/dc-dc-converter/specification/i6a4w_spec.pdf)
+
+[^esp32]: <br> ![image](https://user-images.githubusercontent.com/53580358/150812828-c129d159-ef26-4909-93cf-39b9f3dced7a.png)
+

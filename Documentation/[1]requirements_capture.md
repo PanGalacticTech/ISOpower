@@ -52,6 +52,32 @@ _Space for discussion and weighing up of features that may or may not be require
 #### Quality Assurance 
 _What quality assurances or requirements, if any, need to be established?_
 
+#### Notes
+_Any Extra Notes?_
+Software Reqirements: 
+JSON commands/interaction with microcontroller -> actuating commands & reporting Status.
+reporting of status 1 per second.  Minimum include current for 5v bus & 12v bus, time since last reset - as integer Not float. (keep track of number of times millis() rollsover)
+value good for 10 years. 
+
+443 TCP 
+
+Whenever voltage out of spec log on controller, send message via json, LIMIT MESSAGE RATE. query data remotly, how many time tripped, last time tripped. way to reset count?
+
+
+Break in auto detect line to or gates so can be easily disabled.
+
+
+DC power Supplies fault output. use for visual indication lEDs & report via JSON.
+
+https://github.com/dpreid/pidui/issues/5
+
+
+
+
+
+
+
+
 ### Existing Products & COTS (Consumer Off The Shelf)
 _The project brief may also contain information on currently available similar products and a brief description of the features they lack and a 
 quick review of whether they can fullfill the aims of the project._

@@ -50,10 +50,26 @@ _Hardware Specification may contain the following subsections:_
 
 **[HL.9, HL.4, HL.13]**
 > The 5v Bus will be distributed to 5 USB outputs via individual high side MOSFET switches for each channel,
-> these will be connected source to 5v bus, drain to USB output, and gate to the logic circuit which distributes 
-> signals from the digital drive pins from the MCU for each channel, and the Voltage Detection IC.
->
+> these will be connected source to 5v bus, drain to USB output, and gate to the logic circuit used to 
+> trigger a power shutoff condition.
+> 
 > Solder bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
+
+
+**[HL.4, HL.13]**
+> Logic circuit to control power to each 5v USB output will follow the following logic, if: <br>
+> A = microcontroller digital pin (1 per channel, logic level HIGH = channel deactivated) <br>
+> B = Voltage Monitoring circuit (1 per +5v Bus, logic level HIGH = off nominal voltage detected)  <br>
+> C = Output to MOSFET gate (1 per channel, logic level HIGH = MOSFET OFF state) <br>
+
+> IF A OR B == HIGH: C = HIGH.
+
+
+
+**[HL.13]**
+> The voltage protection circuit will comprise of 2 TL431 Voltage reference ICs set as a window comparator. This circuit will
+> output logic level LOW in the case +5V_BUS is pulled off nominal. (4.6v - 5.5v).
+> 
 
 **[HL.7, HL.8]**
 > 12v bus power will be distributed to 5 XT30 connectors, mounted directly on the PCB. 
@@ -74,7 +90,8 @@ _Hardware Specification may contain the following subsections:_
 > R2: 56k <br>
 > to scale voltage to correct input for LED driver. 24Vin =~ 8.6Vout
 
-> _Optional:_
+
+_Optional:_
 > The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without. [Dependent on overall size & space left after all other requirements have been met]
 
 -----------------------------------------------------------------------------------------------------
@@ -98,7 +115,7 @@ _Hardware Specification may contain the following subsections:_
 
 
 
-#### P-Channel MOSFET 
+#### P-Channel MOSFET for Channel Switching
 _Use: High side power switch_
 1. Switching of 5v USB power from bus to individual outputs
 2. Switching of 12v power from bus to individual outputs (optional feature)
@@ -127,10 +144,39 @@ _In the case the requirements for a component are known, however the specific pa
 |                 |                                                  |          |       |
 |URL:             |  [IRF5305PBF - Farnell](https://uk.farnell.com/infineon/irf5305pbf/mosfet-p-55v-31a-to-220/dp/8648255) |         |        |
 |Availability     |   In Stock                                       | [x]       |       |
-|Notes:           |                                                  |         |       |                                                                            
+|Notes:           |  |         |       |                                                                            
 |Meets Requirements: |                                               | [x]     |       |
     
 
+#### P-Channel MOSFET for Reverse Volatage Protection
+_Use: Reverse voltage protection_
+1. MOSFET is ON when gate is @ 0v, OFF when gate is driven to VDD
+
+_Component Requirements:_
+| Attribute | Value        | Notes |
+|---        |---           |---    |
+| Vds        | > (-)21V      | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
+|Id         | > (-)6A        | Max Continuous Drain Current > Stall Current of Motor |
+| Vgs       | ~ -4.5       | Gate - Source Threshold Voltage[^Vgs] |
+| Rds(on)   | <2 ohm       | Static Drain-to-Source-ON-Resistance[^Rds] @ Vgs |
+
+_In the case the requirements for a component are known, however the specific part is unknown, it would be best to use a [spreadsheet](https://github.com/PanGalacticTech/project_template/blob/main/%5B2A%5Dcomponent_compare.xlsx) to weigh up alternative options._
+
+##### Option 1: <br>
+**IRF5305PBF P Channel MOSFET**
+|Attribute        | Value                                            |Suitable  | Notes |
+|---              |---                                               |---       |---    |
+|Part Number:     |  IRF5305PBF                                      |          |       |
+|Supplier:        | Farnell                                          | [x]      |       |                 
+|Vds              |  -55V                                            | [x]      |       |     
+|Id               |  -31A                                            | [x]      |       |  
+|Rds(on) @ -10v   |  0.06                                            | [x]      |       |      
+|Price:           |  £2.088                                          | [x]      |       |      
+|                 |                                                  |          |       |
+|URL:             |  [IRF5305PBF - Farnell](https://uk.farnell.com/infineon/irf5305pbf/mosfet-p-55v-31a-to-220/dp/8648255) |         |        |
+|Availability     |   In Stock                                       | [x]       |       |
+|Notes:           |   DO NOT USE FOR REVERSE POWER PROTECTION ON 24V BUS. Vgs Max is 20v|         |       |                                                                            
+|Meets Requirements: |                                               | [x]     |       |
 
 #### AtMega328P MCU
 
