@@ -332,6 +332,18 @@
     [
       "f9ad6110-c54c-46dc-af11-fdacac24e4c9",
       "Power Outputs"
+    ],
+    [
+      "435e8585-0aa6-45a8-a095-bd4d51e05765",
+      "USB MCU Interface"
+    ],
+    [
+      "b8f060f7-7c71-4b4e-afbc-cb65adbbce26",
+      "USB MCU Interface B"
+    ],
+    [
+      "330c6a2c-ef5e-4ba5-9203-bd719a2545ac",
+      "Logic Level Conversion"
     ]
   ],
   "text_variables": {}
