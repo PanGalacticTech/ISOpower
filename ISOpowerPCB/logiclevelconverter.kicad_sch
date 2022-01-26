@@ -310,6 +310,16 @@
     (uuid f8d52d8c-96e6-48fb-b6b7-1d83127561eb)
   )
 
+  (text "https://www.ti.com/lit/ds/symlink/txs0104e.pdf?ts=1643186590728&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTXS0104E%253FkeyMatch%253D%2526tisearch%253Dsearch-everything%2526usecase%253Dpartmatches"
+    (at 29.21 135.89 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 82ab5441-43bd-43dc-a90d-ee9a16d9564c)
+  )
+  (text "NOTE: REPLACE WITH THIS." (at 30.48 133.35 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid da0b6bc2-0847-430d-87b1-013de4dfb90e)
+  )
+
   (global_label "V_A" (shape input) (at 64.77 66.04 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 0443384d-669f-4d28-a5c5-5e76cc986060)
