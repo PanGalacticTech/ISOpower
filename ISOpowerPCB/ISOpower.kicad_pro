@@ -346,8 +346,8 @@
       "5v to 12v logic conversion"
     ],
     [
-      "84c8d265-23b6-4cb6-9682-456a77be36e6",
-      "MCU to USB interface CP2102"
+      "b86764a3-50e0-4d6c-869d-b8d48d944fad",
+      "USB ESP32 CH340 Interface "
     ]
   ],
   "text_variables": {}
