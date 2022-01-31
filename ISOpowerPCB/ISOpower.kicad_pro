@@ -348,6 +348,14 @@
     [
       "b86764a3-50e0-4d6c-869d-b8d48d944fad",
       "USB ESP32 CH340 Interface "
+    ],
+    [
+      "adda6eb8-8496-4821-8ecb-a66002e822bf",
+      "mechanical_layer"
+    ],
+    [
+      "4cdbbf68-1918-4084-bbdf-36d394700988",
+      "voltage_monitoring"
     ]
   ],
   "text_variables": {}
