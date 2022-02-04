@@ -592,7 +592,7 @@
     (uuid f9e83731-f733-40e4-9c7f-6906aaf7d750)
   )
 
-  (hierarchical_label "GND_IN" (shape bidirectional) (at 25.4 21.59 180)
+  (hierarchical_label "GND_IN" (shape passive) (at 25.4 21.59 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 09d8886d-e75c-4969-bb98-bfd7ae54cb13)
   )

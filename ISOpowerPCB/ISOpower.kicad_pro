@@ -338,12 +338,12 @@
       "USB MCU CH340 Interface A"
     ],
     [
-      "330c6a2c-ef5e-4ba5-9203-bd719a2545ac",
-      "Logic Level Conversion"
+      "1109cf51-aa55-4d61-a52b-3c3893692869",
+      "5v to 12v logic conversion_v2"
     ],
     [
-      "2a3af6b8-e8ee-47c1-8a1b-7ac739a8e7c3",
-      "5v to 12v logic conversion"
+      "330c6a2c-ef5e-4ba5-9203-bd719a2545ac",
+      "Logic Level Conversion"
     ],
     [
       "b86764a3-50e0-4d6c-869d-b8d48d944fad",

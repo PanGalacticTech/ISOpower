@@ -603,7 +603,7 @@
     (uuid db64df1f-0549-408b-96b3-110778ae722b)
   )
 
-  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 152.4 172.72 0) (unit 1)
+  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 152.4 172.72 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 0de62e0d-65e2-4c76-816e-0b069427049d)
     (property "Reference" "R?" (id 0) (at 154.94 171.4499 0)
@@ -622,7 +622,7 @@
     (pin "2" (uuid 0e218a94-7b94-4564-a015-c835bdab8a33))
   )
 
-  (symbol (lib_id "000_MOSFET_Immo:BSS138") (at 143.51 44.45 270) (unit 1)
+  (symbol (lib_id "000_MOSFET_Immo:BSS138") (at 143.51 44.45 270)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 0e8cc5ed-442f-47d5-ba6e-bd556a88c1e7)
     (property "Reference" "Q?" (id 0) (at 143.51 52.07 90))
@@ -638,7 +638,7 @@
     (pin "3" (uuid 370ec793-7fdf-4e71-b586-2e451259a427))
   )
 
-  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 152.4 107.95 0) (unit 1)
+  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 152.4 107.95 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 133b4251-1120-47fc-98e2-71e8ba82b0ed)
     (property "Reference" "R?" (id 0) (at 154.94 106.6799 0)
@@ -657,7 +657,7 @@
     (pin "2" (uuid dcad41ec-fa31-48e1-aaf2-4d032d493f0d))
   )
 
-  (symbol (lib_id "000_MOSFET_Immo:BSS138") (at 143.51 80.01 270) (unit 1)
+  (symbol (lib_id "000_MOSFET_Immo:BSS138") (at 143.51 80.01 270)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 14ced5b4-8d22-4b72-b034-0b7dade519d5)
     (property "Reference" "Q?" (id 0) (at 143.51 87.63 90))
@@ -673,7 +673,7 @@
     (pin "3" (uuid 17816065-3393-41ef-9e7c-4bb42a5ce111))
   )
 
-  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 133.35 107.95 0) (unit 1)
+  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 133.35 107.95 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 1c74d9ba-8d2b-4219-a64a-86006f8233fb)
     (property "Reference" "R?" (id 0) (at 135.89 106.6799 0)
@@ -692,7 +692,7 @@
     (pin "2" (uuid adb14883-5b9c-4dc3-9692-da1de68200ff))
   )
 
-  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 152.4 73.66 0) (unit 1)
+  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 152.4 73.66 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 2a66bea1-e9f6-4b69-ad01-2084bf4b6043)
     (property "Reference" "R?" (id 0) (at 154.94 72.3899 0)
@@ -711,7 +711,7 @@
     (pin "2" (uuid f946a92a-b415-4b29-b009-4ab9849847d2))
   )
 
-  (symbol (lib_id "000_MOSFET_Immo:BSS138") (at 143.51 146.05 270) (unit 1)
+  (symbol (lib_id "000_MOSFET_Immo:BSS138") (at 143.51 146.05 270)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 3aec9ff6-0b70-44a5-9a9b-e0ab8ca7ec9a)
     (property "Reference" "Q?" (id 0) (at 143.51 153.67 90))
@@ -727,7 +727,7 @@
     (pin "3" (uuid 91789983-87ba-4109-85ed-1ee8cc7fe486))
   )
 
-  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 152.4 38.1 0) (unit 1)
+  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 152.4 38.1 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 82fb1eb8-bfe2-4c1c-b528-bd8f0d340e61)
     (property "Reference" "R?" (id 0) (at 154.94 36.8299 0)
@@ -746,7 +746,7 @@
     (pin "2" (uuid a1b4a0a4-5167-47c5-a5b6-021f0af4da7d))
   )
 
-  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 133.35 172.72 0) (unit 1)
+  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 133.35 172.72 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 89ebc5ed-f49c-4170-9a7d-6f56ca393ad8)
     (property "Reference" "R?" (id 0) (at 135.89 171.4499 0)
@@ -765,7 +765,7 @@
     (pin "2" (uuid d87157af-644a-4845-943d-60b2647483b0))
   )
 
-  (symbol (lib_id "000_MOSFET_Immo:BSS138") (at 143.51 114.3 270) (unit 1)
+  (symbol (lib_id "000_MOSFET_Immo:BSS138") (at 143.51 114.3 270)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 968f3a92-6c03-4b38-9991-85645235a414)
     (property "Reference" "Q?" (id 0) (at 143.51 121.92 90))
@@ -781,7 +781,7 @@
     (pin "3" (uuid f4080a26-7094-4ee9-9687-7b3eeff0342e))
   )
 
-  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 133.35 73.66 0) (unit 1)
+  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 133.35 73.66 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 9b59d30f-efef-4fcb-9dd2-06ced6f43e4d)
     (property "Reference" "R?" (id 0) (at 135.89 72.3899 0)
@@ -800,7 +800,7 @@
     (pin "2" (uuid 627394b9-6a65-4b2e-9ad6-6462f3c0a4d0))
   )
 
-  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 152.4 139.7 0) (unit 1)
+  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 152.4 139.7 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid c1de9aba-398f-4d50-aefe-0fec19df98e6)
     (property "Reference" "R?" (id 0) (at 154.94 138.4299 0)
@@ -819,7 +819,7 @@
     (pin "2" (uuid db39666d-2551-4c10-ba54-67e332ba4fc1))
   )
 
-  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 133.35 38.1 0) (unit 1)
+  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 133.35 38.1 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid c2c84f86-c8d6-4377-8b2d-60e575bad7bc)
     (property "Reference" "R?" (id 0) (at 135.89 36.8299 0)
@@ -838,7 +838,7 @@
     (pin "2" (uuid 3420a944-fee0-46ac-9b10-f551ee4062f8))
   )
 
-  (symbol (lib_id "000_MOSFET_Immo:BSS138") (at 143.51 179.07 270) (unit 1)
+  (symbol (lib_id "000_MOSFET_Immo:BSS138") (at 143.51 179.07 270)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid d4ff8e5f-07d4-4708-bdfb-ec5a1daac62d)
     (property "Reference" "Q?" (id 0) (at 143.51 186.69 90))
@@ -854,7 +854,7 @@
     (pin "3" (uuid a58b5018-391e-4873-9456-dae9379e7b33))
   )
 
-  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 133.35 139.7 0) (unit 1)
+  (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 133.35 139.7 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e366bd8a-ac88-483d-a301-fb689db4a6e2)
     (property "Reference" "R?" (id 0) (at 135.89 138.4299 0)

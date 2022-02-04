@@ -919,7 +919,7 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid ce4fefba-f67e-4a93-9dbe-aa36dcd04aa2)
   )
-  (hierarchical_label "GND" (shape bidirectional) (at 27.94 30.48 180)
+  (hierarchical_label "GND" (shape passive) (at 27.94 30.48 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid ee8f115e-b415-4efd-aca5-791e2301c6c5)
   )

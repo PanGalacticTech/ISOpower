@@ -447,7 +447,7 @@
     (uuid 1e11fcb8-4a76-4c3d-87ec-fd38c9c26630)
   )
 
-  (hierarchical_label "GND" (shape bidirectional) (at 22.86 17.78 180)
+  (hierarchical_label "GND" (shape passive) (at 22.86 17.78 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 19535fc9-8ec3-41e9-af17-2d94b55a65fd)
   )

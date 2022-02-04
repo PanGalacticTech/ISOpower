@@ -809,7 +809,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid b2c3e364-a7ef-4153-b803-3a71bc2d8563)
   )
-  (hierarchical_label "GND" (shape bidirectional) (at 25.4 24.13 180)
+  (hierarchical_label "GND" (shape passive) (at 25.4 24.13 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid dd2fe9d7-c9bd-4d80-b830-7e003c2b506b)
   )
