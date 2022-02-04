@@ -26,6 +26,7 @@ and microcontroller will control shutdown of DC/DC supply if out of spec voltage
 ## TODO
 - TODO: OE pin now requires low signal untill DC/DC supply is stable - Does it? Can it just be tied to 5v bus with a large capacitor? Does it need MCU to hold pin low untill 5V_BUS is stable?
 - TODO: Add independent overvoltage protection to 5V_BUS? 		[Zener Diode Overvoltage Protection - Sparkfun](https://www.rs-online.com/designspark/how-does-zener-diode-do-overvoltage-protection-in-circuit#:~:text=In%20order%20to%20protect%20the,flow%20in%20the%20reverse%20direction).
+- TODO: Nominal Voltage Indication?
 
 
 
