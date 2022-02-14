@@ -57,7 +57,7 @@
       )
     )
     (symbol "000_Resistors_Immo:Resistor_0805" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "R?" (id 0) (at 2.54 1.2701 0)
+      (property "Reference" "R1" (id 0) (at 2.54 1.2701 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
       (property "Value" "Resistor_0805" (id 1) (at 2.54 -1.2699 0)
@@ -629,6 +629,12 @@
     (uuid c61a2722-9f1c-4b98-bdcd-43286a9df48b)
   )
 
+  (no_connect (at 102.87 128.27) (uuid 33af5c53-0b59-4606-b6ef-c67b2e231a7f))
+  (no_connect (at 102.87 130.81) (uuid 33af5c53-0b59-4606-b6ef-c67b2e231a7f))
+  (no_connect (at 123.19 118.11) (uuid 33af5c53-0b59-4606-b6ef-c67b2e231a7f))
+  (no_connect (at 102.87 125.73) (uuid 33af5c53-0b59-4606-b6ef-c67b2e231a7f))
+  (no_connect (at 102.87 135.89) (uuid 33af5c53-0b59-4606-b6ef-c67b2e231a7f))
+  (no_connect (at 102.87 123.19) (uuid 33af5c53-0b59-4606-b6ef-c67b2e231a7f))
   (no_connect (at 173.99 97.79) (uuid da3580f2-c4c5-4845-a3c2-a53e1475a009))
 
   (wire (pts (xy 144.78 77.47) (xy 156.21 77.47))

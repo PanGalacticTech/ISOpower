@@ -57,7 +57,7 @@
       )
     )
     (symbol "000_Resistors_Immo:Resistor_0805" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "R?" (id 0) (at 2.54 1.2701 0)
+      (property "Reference" "R1" (id 0) (at 2.54 1.2701 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
       (property "Value" "Resistor_0805" (id 1) (at 2.54 -1.2699 0)
@@ -311,7 +311,6 @@
       )
     )
   )
-
 
   (junction (at 146.05 81.28) (diameter 0) (color 0 0 0 0)
     (uuid 000edefe-902a-4149-9221-ca83994652d3)
