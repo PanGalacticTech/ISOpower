@@ -46,9 +46,10 @@ Including Default Class:
 ```mermaid
 graph LR
 %% This is a comment 
-A:::darkBlue ==>B(Stop);
+A(Start):::darkBlue ==>B(Stop):::brightOrange;
 
 classDef darkBlue fill:#333,stroke:#06f,stroke-width:4px;
+classDef brightOrange fill:#eee,stroke:#e90,stroke-width:3px;
 %%class nodeId1, nodeId2 darkBlue;
 ```
 
