@@ -16,7 +16,8 @@
       A(Do I Want A Diagram)-- No -->C(Bottom Text);
       B(Test Text)---->D(Cylinder);
       C(Bottom Text)---->D[(Cylinder)];
-      E((Round Boi)) -->F{This is Unrelated}
+      E((Round Boi)) -->F{This is Unrelated};
+      F == Thick Line ==> E;
 ```
 
 
