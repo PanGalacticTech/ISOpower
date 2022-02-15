@@ -44,7 +44,7 @@ Including Default Class:
 
 
 ```mermaid
-flowchart LR
+graph LR
 %% This is a comment 
 A:::darkBlue(Start)==>B(Stop);
 
