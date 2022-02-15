@@ -5,7 +5,7 @@
 ```mermaid
   graph TD;    
       A[Do I Want A Diagram]-- Yes -->B;
-      A[Do I Want A Diagram]-- No -->C[text];
+      A(Do I Want A Diagram)-- No -->C[text];
       B---->D;
       C---->D;
 ```
@@ -18,10 +18,13 @@
       C---->D;
 ```
 
+
+
+
 ## Explanation
 
-graph TD = graph top down
-graph LR = graph left right
+> graph TD = graph top down <br>
+>  graph LR = graph left right
 
 
 '''https://mermaid-js.github.io/mermaid/#/flowchart'''
