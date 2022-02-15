@@ -46,10 +46,10 @@ Including Default Class:
 ```mermaid
 flowchart LR
 %% This is a comment 
-id1(Start)==>id2(Stop);
+A:::darkBlue(Start)==>B(Stop);
 
 classDef darkBlue fill:#eee,stroke:#033,stroke-width:4px;
-class nodeId1, nodeId2 darkBlue;
+%%class nodeId1, nodeId2 darkBlue;
 ```
 
 
