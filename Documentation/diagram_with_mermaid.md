@@ -48,11 +48,11 @@ Including Default Class:
 
 classDef darkBlue fill:#eee,stroke:#033,stroke-width:4px;
 
-class id1, id2 darkBlue;
+class nodeId1, nodeId2 darkBlue;
 
 flowchart LR
 %% This is a comment 
-id1(Start) ==> id2(Stop);
+id1(Start)==>id2(Stop);
 
 
 ```
