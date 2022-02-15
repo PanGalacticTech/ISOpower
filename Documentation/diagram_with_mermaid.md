@@ -47,9 +47,13 @@ Including Default Class:
 graph LR
 %% This is a comment 
 A(Start):::darkBlue ==>B(Stop):::brightOrange;
+B(Stop) ==> C(Reset?);
+C(Reset?) == yes ==> A;
+C(Reset?) == No ==>D{end}
 
 classDef darkBlue fill:#333,stroke:#06f,stroke-width:4px;
 classDef brightOrange fill:#eee,stroke:#e90,stroke-width:3px;
+classDef default fill:#f9f,stroke:#333,stroke-width:4px;
 %%class nodeId1, nodeId2 darkBlue;
 ```
 
