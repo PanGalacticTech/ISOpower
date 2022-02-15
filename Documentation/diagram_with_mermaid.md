@@ -29,6 +29,36 @@
 >  graph LR = graph left right
 
 
+## Style
+
+Styles can be used:
+
+```
+style id1 fill:#f9f,stroke:#333,stroke-width:4px
+style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+```
+
+Including Default Class:
+
+`classDef default fill:#f9f,stroke:#333,stroke-width:4px;
+
+
+```mermaid
+
+
+classDef darkBlue fill:#eee,stroke:#033,stroke-width:4px;
+
+class id1, id2 darkBlue;
+
+flowchart LR
+%% This is a comment 
+id1(Start) ==> id2(Stop);
+
+
+```
+
+
+
 '''https://mermaid-js.github.io/mermaid/#/flowchart'''
 
 
