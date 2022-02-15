@@ -53,7 +53,7 @@ C(Reset?) == No ==>D{end}
 
 classDef darkBlue fill:#333,stroke:#06f,stroke-width:4px;
 classDef brightOrange fill:#eee,stroke:#e90,stroke-width:3px;
-classDef default fill:#f9f,stroke:#333,stroke-width:4px;
+classDef default fill:#111,stroke:#bbb,stroke-width:2px;
 %%class nodeId1, nodeId2 darkBlue;
 ```
 
