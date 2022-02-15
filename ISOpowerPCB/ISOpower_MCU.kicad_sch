@@ -1706,8 +1706,8 @@
   )
 
   (no_connect (at 154.94 63.5) (uuid 416e1ba5-15e0-43c9-9060-14d0d60e0290))
-  (no_connect (at 199.39 80.01) (uuid 416e1ba5-15e0-43c9-9060-14d0d60e0290))
-  (no_connect (at 209.55 80.01) (uuid 416e1ba5-15e0-43c9-9060-14d0d60e0290))
+  (no_connect (at 199.39 80.01) (uuid 416e1ba5-15e0-43c9-9060-14d0d60e0291))
+  (no_connect (at 209.55 80.01) (uuid 416e1ba5-15e0-43c9-9060-14d0d60e0292))
 
   (wire (pts (xy 185.42 106.68) (xy 254 106.68))
     (stroke (width 0) (type default) (color 0 0 0 0))
