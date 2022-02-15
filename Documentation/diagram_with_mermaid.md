@@ -14,8 +14,8 @@
       graph LR
       A(Do I Want A Diagram)-- Yes -->B;
       A(Do I Want A Diagram)-- No -->C(Bottom Text);
-      B()---->D();
-      C()---->D();
+      B(Test Text)---->D(Down Text);
+      C(Bottom Text)---->D(Down Text);
 ```
 
 
