@@ -48,7 +48,7 @@ graph LR
 %% This is a comment 
 A:::darkBlue ==>B(Stop);
 
-classDef darkBlue fill:#eee,stroke:#033,stroke-width:4px;
+classDef darkBlue fill:#333,stroke:#033,stroke-width:4px;
 %%class nodeId1, nodeId2 darkBlue;
 ```
 
