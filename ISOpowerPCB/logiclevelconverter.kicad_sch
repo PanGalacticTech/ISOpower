@@ -5,12 +5,12 @@
   (paper "A4")
 
   (lib_symbols
-    (symbol "000_Capacitor_FIlm_Immo:cap_film_0805" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
-      (property "Reference" "C6" (id 0) (at 1.27 2.54 0)
-        (effects (font (size 1.27 1.27)))
+    (symbol "000_Capacitor_Film_Immo:cap_film_0805" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (id 0) (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Value" "cap_film_0805" (id 1) (at 2.54 -2.54 0)
-        (effects (font (size 1.27 1.27)))
+      (property "Value" "cap_film_0805" (id 1) (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
       )
       (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (id 2) (at 1.27 -10.16 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -57,7 +57,7 @@
       )
     )
     (symbol "000_Resistors_Immo:Resistor_0805" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "R1" (id 0) (at 2.54 1.2701 0)
+      (property "Reference" "R?" (id 0) (at 2.54 1.2701 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
       (property "Value" "Resistor_0805" (id 1) (at 2.54 -1.2699 0)
@@ -312,7 +312,6 @@
     )
   )
 
-
   (junction (at 146.05 81.28) (diameter 0) (color 0 0 0 0)
     (uuid 000edefe-902a-4149-9221-ca83994652d3)
   )
@@ -481,7 +480,7 @@
     (uuid f32b19d9-d9c4-452e-9fba-36f5265626a3)
   )
 
-  (symbol (lib_id "000_Capacitor_FIlm_Immo:cap_film_0805") (at 167.64 96.52 0) (unit 1)
+  (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 167.64 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 17240f7f-33b8-4505-8f32-53a55bec4add)
     (property "Reference" "C27" (id 0) (at 171.45 95.2499 0)
@@ -500,7 +499,7 @@
     (pin "2" (uuid 788d02e8-3883-4f75-b9c2-c348af6b6bdd))
   )
 
-  (symbol (lib_id "000_Capacitor_FIlm_Immo:cap_film_0805") (at 115.57 96.52 0) (unit 1)
+  (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 115.57 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 357943b0-d717-4450-88fb-da61234d4e2c)
     (property "Reference" "C26" (id 0) (at 119.38 95.2499 0)

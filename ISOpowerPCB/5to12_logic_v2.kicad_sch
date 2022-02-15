@@ -6,7 +6,7 @@
 
   (lib_symbols
     (symbol "000_Resistors_Immo:Resistor_0805" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "R1" (id 0) (at 2.54 1.2701 0)
+      (property "Reference" "R?" (id 0) (at 2.54 1.2701 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
       (property "Value" "Resistor_0805" (id 1) (at 2.54 -1.2699 0)
