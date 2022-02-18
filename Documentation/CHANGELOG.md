@@ -28,47 +28,6 @@ and microcontroller will control shutdown of DC/DC supply if out of spec voltage
 15. Added capacitor to OE pin on logic level converter and tied pin to 3v3
 
 
-## TODO
-
-PCB Layout
-
-## TODO Notes
-
-Check advantages of TH or SMD electrolytic capacitors - speccing SMD parts for now.
-
-
-
-## Components
-
-What is Ext. Price on JLC PCB?
-
-#### JLC Sourced Components
-
-| Type					|Value	| Footprint | Price(pU)	|Min Quantity	| Price(min Q)	|JLC Part No|Vmax	| SMD/TH 	|Basic Part?|
-|---					|---	|---		|---		|---			|---			|---		|--		|---		|			|
-|Film/MLCC				| 100n	| 0805		|0.0046		|	4000		|				|C49678		|100	|	SMD		|	Yes		|
-|Film/MLCC				| 22n	| 0805		|0.0112		|	4000 or 20	| 0.0112		|C1804		|50		|	SMD		|	Yes		|
-|Electrolytic Capacitor | 100u 	| 6.3x7.7	|0.0895		| 	900			| 80.55			|C65221		|35		|	SMD		|			|
-|Electrolytic Capacitor | 22u	| 6.3x5.4	|0.0383		|  	1000 or 10?	| 38.3			|C72505		|50		|	SMD 	|			|	
-|Film/MLCC				| 1n	| 0805		|0.0076		| 	4000 or 20? | 30.4			|C46653		|50		|	SMD		|	Yes		|
-|Electrolytic Capacitor	| 680u	| 12.5x20	|0.2914		|	100 or 1?	| 29.14			|C270015	|50		| 	TH		|			|
-|Electrolytic Capacitor	| 220u	| 6.3x7.7	|0.0467		|	1000 or 10	| 46.7			|C2887273	|16		| 	SMD		|	Yes		|
-|Film/MLCC				| 4n7	| 0805		|0.0054		| 	4000 or 20? | 21.6			|C1744		|50		|	SMD		|	Yes		|
-|Zener Diode			| 18v 	| MINIMELF	|0.0289		|	2500 or 20	|	72?			|C410854	|19.1	|	SMD		|			|	
-|LED					| Blue	| 0805		|0.038		|	3000		|	114?		|C138557	| n/a	|	SMD		|			|
-|Schottky Diode 1N5821	|SS36-E3| DO-214AB	|0.3063 	|	850 or 2	|  255!?!		|C35722		| 60	| 	SMD		|	Yes	 	| Used D_SMA Footprint
-|PRTR5V0U2X				|		| SOT-143	|0.0649		|	3000 or 10	| 				|C2827688	|		|	SMD		|			|
-|LED					|Green	| 0805		|0.0178		|				|				|C84257		|		|	SMD		|			|	
-|LED					|Red	| 0805		|0.0123		|				|				|C84256		|		|	SMD		|	Yes		|
-|Fuse/Holder			|20A	| -			|			|				|				|			|		|	TH		|			| Can be sourced from JLC? Check
-|USB Connector			| A   	|
-	
-#### Externally Sourced Components
-
-| Type 	| Value | Footprint | Price(pu)	| Min Q	| Price (Min Q)	|	Supplyer 	| Supplier ID 	| 
-|---	|---	|---		|---		|---	|---			|---			|---			|	
-| XT60	| male	| custom	|			|		|				|				|				|
-
 
 ## Change Notes
 OE pin now requires low signal untill DC/DC supply is stable - Does it? Can it just be tied to 5v bus with a large capacitor? < YES || Does it need MCU to hold pin low untill 5V_BUS is stable? < Overkill
