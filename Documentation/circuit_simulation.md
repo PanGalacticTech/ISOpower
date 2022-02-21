@@ -5,7 +5,7 @@ _File created to document any circuit simulation undertaken as part of the desig
 
 
 
-## High Side MOSFET Switches for Experement power.
+## High Side MOSFET Switches for Experiment power.
 
 In order to control the 12v power to each experiment, a high-side P-Channel MOSFET switch was selected. In order to fully shut off power, this requires driving
 the gate to ~12v. The following circuit was selected for driving the gate voltage to a Vmax ~12v from the 5v output of the AtMega328p.
