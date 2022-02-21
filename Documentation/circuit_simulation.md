@@ -16,44 +16,44 @@ the gate to ~12v. The following circuit was selected for driving the gate voltag
 This circuit was simulated in Pspice using KiCAD.
 
 #### Vin = 0
-Circuit: KiCad schematic
-Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
-Initial Transient Solution
+Circuit: KiCad schematic <br>
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000 <br>
+Initial Transient Solution <br>
 --------------------------
-Node                                   Voltage
-----                                   -------
-vcc                                         12
-out                                  0.0029115
-/vb2                                  0.686963
-xq2.11                              0.00117613
-/vc                                    6.34348
-/vb                                1.90442e-07
-xq1.11                                 6.34348
-vin                                          0
-v1#branch                          -0.00176536
-v2#branch                          1.90442e-11
- Reference value :  0.00000e+00
-No. of Data Rows : 1008
+|Node|                                   Voltage
+|----|                                   -------
+|vcc|                                         12
+|out |                                 0.0029115
+|/vb2 |                                 0.686963
+|xq2.11|                              0.00117613
+|/vc    |                                6.34348
+|/vb     |                           1.90442e-07
+|xq1.11   |                              6.34348
+|vin       |                                   0
+|v1#branch  |                        -0.00176536
+|v2#branch   |                       1.90442e-11
+| Reference value : | 0.00000e+00
+|No. of Data Rows :| 1008
 
 #### Vin = 5
-Circuit: KiCad schematic
-Background thread stopped with timeout = 0
-Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
-Initial Transient Solution
+Circuit: KiCad schematic <br>
+Background thread stopped with timeout = 0 <br>
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000 <br>
+Initial Transient Solution <br>
 --------------------------
-Node                                   Voltage
-----                                   -------
-vcc                                         12
-out                                         12
-/vb2                                0.00340635
-xq2.11                                      12
-/vc                                 0.00340599
-/vb                                   0.677878
-xq1.11                              0.00135468
-vin                                          5
-v1#branch                          -0.00119966
-v2#branch                         -0.000432212
- Reference value :  0.00000e+00
-No. of Data Rows : 1008
+|Node  |                                 Voltage
+|----   |                                -------
+|vcc     |                                    12
+|out      |                                   12
+|/vb2      |                          0.00340635
+|xq2.11     |                                 12
+|/vc         |                        0.00340599
+|/vb          |                         0.677878
+|xq1.11        |                      0.00135468
+|vin            |                              5
+|v1#branch       |                   -0.00119966
+|v2#branch        |                 -0.000432212
+| Reference value : | 0.00000e+00
+|No. of Data Rows : |1008
 
 
