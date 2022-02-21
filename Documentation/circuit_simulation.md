@@ -16,6 +16,7 @@ the gate to ~12v. The following circuit was selected for driving the gate voltag
 This circuit was simulated in Pspice using KiCAD.
 
 #### Vin = 0
+
 Circuit: KiCad schematic <br>
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000 <br>
 Initial Transient Solution <br>
@@ -36,6 +37,7 @@ Initial Transient Solution <br>
 |No. of Data Rows :| 1008
 
 #### Vin = 5
+
 Circuit: KiCad schematic <br>
 Background thread stopped with timeout = 0 <br>
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000 <br>
