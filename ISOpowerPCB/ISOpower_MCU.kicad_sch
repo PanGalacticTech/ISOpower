@@ -1677,6 +1677,7 @@
     )
   )
 
+
   (junction (at 219.71 101.6) (diameter 0) (color 0 0 0 0)
     (uuid 04b472d9-99f4-45ab-abe0-d085137ccfc1)
   )
@@ -3484,7 +3485,7 @@
     (property "Value" "i2c Header" (id 1) (at 165.1 173.99 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Vertical" (id 2) (at 163.83 177.8 0)
+    (property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical" (id 2) (at 163.83 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 163.83 177.8 0)
