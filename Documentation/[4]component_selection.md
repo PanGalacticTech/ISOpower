@@ -1,11 +1,24 @@
-# Component Selection - [Project Title]
+# Component Selection & PCB Specification - [Project Title]
 
-_A form to document and record specific part selections for use with PCB fabrication services like JLC PCB. This document should be filled in
-alongside assigning footprints in eschema, to ensure that the correct footprints have been selected before moving to PCB layout._
-
+_A form to document and record specific part selections and PCB specifications for use during the PCB layout, and with PCB fabrication services like JLC PCB._ 
 
 
-## Component Selections Notes
+## PCB Layout Process
+
+1. Verify schematic is correct.
+2. Use Reference Designator tool to assign parts numbers to schematic symbols.
+3. Perform Electrical Rules Check - NOTE: There will always be some errors & warnings that are unable to be cleared, this is not a problem as long as each one can be justified for your use case.
+4. Assign footprints, use specified parts & JLCpcb parts library to cross check selected components against suitable item in parts libary. This will ensure that selected part is attainable and cost effective before moving onto layout.
+5. Define net classes in Eschema using [File] > [Schematic Setup] > {Project} -> [Net Classes]. See [Net Classes]() below.
+	- Note: This is only viewable on the schematic for now. Dont Change line thickness, but different colours can be used to make sure net classes are being assigned correctly.
+	- When we move into PCB layout we can define the thickness required for each net class.
+6. Open PCB in board editor.
+
+
+## Component Selections Notes -
+
+_This document should be filled in alongside assigning footprints in eschema, to ensure that the correct footprints have been selected before moving to PCB layout. At this stage of the 
+design process, it is important to consider fabrication and start colating information that will be required by the fabrication house._
 
 1. Check advantages of TH or SMD electrolytic capacitors - speccing SMD parts for now.
 
@@ -24,7 +37,7 @@ alongside assigning footprints in eschema, to ensure that the correct footprints
 5. What is Ext price?
 
 6. What Files are needed for SMT assembly?
-	- Gerber files
+	- Gerber files [^gerber]
 	- BOM [^1]
 	- CPL Component Placement List / PNP Pick & Place File[^2]
 
@@ -72,11 +85,11 @@ What is Ext. Price on JLC PCB?
 |HEF4093 NAND Gate Shmitt|		|SOIC-14_3.9x8.7x1.27|0.2356|2500 or 1	|				|C7867		|		|	SMD		|			|
 |5032-4P Xtal			|16MHz	|Xtal_SMD_abracon_ABM3C-4p_5.0x3.2|0.4071|1000 or 1|	|C242216	|		|	SMD		|			|
 
-
+So far 23 extended components @ $3 each = $69 extra fee for component loading in pick & place machine.
 
 
 #### Parts Options
-_ Alternative options for components that have been rejected_
+_Alternative options for components that have been rejected_
 
 
 | Type					|Value	| Footprint | Price(pU)	|Min Quantity	| Price(min Q)	|JLC Part No|Vmax	| SMD/TH 	|Basic Part?|Reason Against|
@@ -84,13 +97,8 @@ _ Alternative options for components that have been rejected_
 |Tactile Switch pushbutton|SPST	|SW4_5.1x5.1x5.1|0.0169	|4000 or 5		|	67.6		|C318884	|		|	SMD		|	Yes		|	No suitable Footprint		|
 |AtMega328p-AU			|		|TQFP-32_7x7mm_P0.8mm|8.9386|490 or 1	| expense		|C14877		|		|	SMD		| 	Yes		|	16 dollars! |
 
-
-
-
-
-
 	
-So far 8 extended components @ $3 each = $24 dollarydoos extra.
+
 
 #### Externally Sourced Components
 
@@ -105,6 +113,30 @@ So far 8 extended components @ $3 each = $24 dollarydoos extra.
 
 
 
+## Net Classes
+_List Net Classes & Specifications. Calculations below if required._
+
+1oz Copper = ~35 um (0.035mm)
+2oz Copper = ~70 um   
+
+Trace Thickness Assumed to be 0.035mm
+
+
+| Bus/Bus Class		| Type 	| Vmax 	| Vtyp 	| Imax 	| Ityp 	| Pmax	| Ptyp	|Temp Rise	| Trace Width(mm) 	|Colour	| Notes |
+|----				|----	|----	|----	|----	|----	|----	|----	|----		|----				|----	|---	|
+| Default			|Signal	| 	12	|	5	|		|		|		|		|	20		| 	0.8				|Default|		|		
+| GND				|Power	|	0	|	0	| 28.83	| 6.16	|		|		|	20		|	2.5				|Brown 	|Same power requirements as 24V_BUS		|
+| 24V_BUS			|Power	|	30	|	24	| 28.83	| 6.16	|	346	| 147.9	|	20		|	2.5				|Red	|24v must be able to provide sum total of all other power bus		|
+| 12V_BUS			|Power	|	12	|	12	| 20.83	| 10.2	|	250	| 122.4	|	20		|	5				|Orange	|Imax is @ max power available from DC/DC - Unlikely condition	|
+| 5V_BUS			|Power	|	5	|	5	| 16.2	| 4.8	|	81	| 24	|	20		|	2				|Yellow	|Imax assumes 6x raspi drawing 2.7A, typical is 0.4-0.8A	|
+| MCU_5V_BUS		|Power	|	5	|	5	| 3		| 0.5	|	15	| 1.5	|	20		|	1				|Lime	|max taken from max available from large wall plug USB chargers	|
+| USB_PBUS			|Power	|	"	|	"	| "		|  "	|	"	| " 	|	20		|	1				|Aqua	|Same as above Not included in 24v calcs	|
+| Data				|Data	|	5	|	2.5	|	n/a	|	n/a	|	n/a	|	n/a	|	20		|	0.8				|Purple	|		|
+| CURRENT_SENSOR	|Power	|	12	|	12	|20.83	|	10.2|		|		|	4		|	6				|Blue	|		|
+
+
+
+
 
 ## TODO
 
@@ -112,6 +144,9 @@ PCB Layout
 
 
 # Notes
+
+[^gerber]: List of commonly used file names & formats, accepted by the majority of fabrication houses:
+			- F.CU
 
 
 [^1]: BOM Bill Of Materials
