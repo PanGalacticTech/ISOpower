@@ -31,6 +31,22 @@ and microcontroller will control shutdown of DC/DC supply if out of spec voltage
 #### 22/02/22
 16. Changed logic level conversion circuit based on pspice analysis of previous circuit.
 
+##### TODO:
+Board is too overloaded to fit everything, there are several courses of action:
+
+1. Remove features.
+2. Pick Smaller components
+3. implment the same features using less components.
+4. daughterboards, requiring carefully cutting nets between sections of the PCB such that it can be re-implemented using pin headers.
+	- Note, the use of hirachical sheets should make this process far easier, with the caviat that the use of Global labels may have made this more difficult.
+	TODO:
+	- Step 1: replace all global power labels in hirarchical sheets with LOCAL net labels. I dont like the use of net labels for joining wires as I beleive it is less clear when
+	reading the schematic, however this avoids the issue of having global labels connect "In the background"
+	- Step 2: Break nets going between main and MCU hirachical sheet, and rejoin them using pin headers. 
+	
+
+
+
 
 
 ## Change Notes
