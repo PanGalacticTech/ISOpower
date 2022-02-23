@@ -1,4 +1,4 @@
-19804078499078457
+19807385028777998
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -6392,6 +6392,20 @@ XT60 female vertical
 2
 Connector_AMASS
 AMASS_XT60-M_1x02_P7.20mm_Vertical
+AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf
+XT60 female vertical
+0
+2
+2
+Connector_AMASS
+AMASS_XT60PW-M
+
+
+0
+4
+4
+Connector_AMASS
+AMASS_XT60PW-M_1x02_P7.20mm_PCB
 AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf
 XT60 female vertical
 0

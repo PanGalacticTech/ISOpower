@@ -2889,7 +2889,7 @@
     (uuid 1d931e55-4d0e-4111-b6af-15a42135935e)
     (property "Reference" "U2" (id 0) (at 62.23 55.88 0))
     (property "Value" "AMS1117-3.3" (id 1) (at 62.23 58.42 0))
-    (property "Footprint" "Package_TO_SOT_SMD:TO-252-3_TabPin2" (id 2) (at 62.23 58.42 0)
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2" (id 2) (at 62.23 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf" (id 3) (at 64.77 69.85 0)

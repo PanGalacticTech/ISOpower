@@ -31,6 +31,11 @@ and microcontroller will control shutdown of DC/DC supply if out of spec voltage
 #### 22/02/22
 16. Changed logic level conversion circuit based on pspice analysis of previous circuit.
 
+#### 23/02/2022
+
+17. Reevaluated board with both microcontrollers on daughterboard. This is unfortunatly still not going to fit, however, by moving the AtMega & Associated hardware back onto the main PCB, it might free up enough space to fit the ESP32 as
+a breakaway module.
+
 ##### TODO:
 Board is too overloaded to fit everything, there are several courses of action:
 
@@ -42,7 +47,10 @@ Board is too overloaded to fit everything, there are several courses of action:
 	TODO:
 	- Step 1: replace all global power labels in hirarchical sheets with LOCAL net labels. I dont like the use of net labels for joining wires as I beleive it is less clear when
 	reading the schematic, however this avoids the issue of having global labels connect "In the background"
-	- Step 2: Break nets going between main and MCU hirachical sheet, and rejoin them using pin headers. 
+	- Step 2: Break nets going between main and MCU hirachical sheet, and rejoin them using pin headers.
+
+
+	
 	
 
 
