@@ -2944,11 +2944,11 @@
     (path "/bd4eb304-3e85-4f2d-8568-e8105e1edb8e"
       (reference "Q1") (unit 1) (value "IRF5305_PBF") (footprint "Package_TO_SOT_SMD:TO-263-2")
     )
-    (path "/1f76f9be-4bce-499b-8dda-2796b250b412/c9c8e073-2500-42a2-bbaf-dedd3cbceb5f"
-      (reference "Q2") (unit 1) (value "IRF5305_PBF") (footprint "Package_TO_SOT_SMD:TO-263-2")
+    (path "/1f76f9be-4bce-499b-8dda-2796b250b412/0762769b-e980-468b-9209-9905d648d749"
+      (reference "Q2") (unit 1) (value "Si2319CDS") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
-    (path "/1f76f9be-4bce-499b-8dda-2796b250b412/c67e12c1-403b-41d1-9750-88dde9294060"
-      (reference "Q3") (unit 1) (value "IRF5305_PBF") (footprint "Package_TO_SOT_SMD:TO-263-2")
+    (path "/1f76f9be-4bce-499b-8dda-2796b250b412/cab3d9da-85df-43bc-912d-e55aee412d29"
+      (reference "Q3") (unit 1) (value "Si2319CDS") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/f9ad6110-c54c-46dc-af11-fdacac24e4c9/6e4fd327-d4cc-4611-bbe2-7f4e980abf04"
       (reference "Q4") (unit 1) (value "IRF5305_PBF") (footprint "Package_TO_SOT_SMD:TO-263-2")
@@ -3041,10 +3041,10 @@
       (reference "R5") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/1f76f9be-4bce-499b-8dda-2796b250b412/e3937bfc-00fb-4abf-a9f6-43081a17fcb6"
-      (reference "R6") (unit 1) (value "5V_BUS_TRIM") (footprint "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal")
+      (reference "R6") (unit 1) (value "5V_BUS_TRIM") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
     )
     (path "/1f76f9be-4bce-499b-8dda-2796b250b412/56d35886-363d-4dfd-a015-0ee7a39d4308"
-      (reference "R7") (unit 1) (value "BUS_A_trim") (footprint "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal")
+      (reference "R7") (unit 1) (value "BUS_A_trim") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
     )
     (path "/f811a9bf-1128-4bae-b7e5-2ff69e6cf287/435e8585-0aa6-45a8-a095-bd4d51e05765/572cddbe-0565-413e-bca0-777978d99156"
       (reference "R8") (unit 1) (value "1M") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")

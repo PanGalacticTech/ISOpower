@@ -33,8 +33,14 @@ and microcontroller will control shutdown of DC/DC supply if out of spec voltage
 
 #### 23/02/2022
 
-17. Reevaluated board with both microcontrollers on daughterboard. This is unfortunatly still not going to fit, however, by moving the AtMega & Associated hardware back onto the main PCB, it might free up enough space to fit the ESP32 as
-a breakaway module.
+17. Reevaluated board with both microcontrollers on daughterboard. This is unfortunatly still not going to fit, however, by moving the AtMega & Associated hardware back onto the main PCB, it might free up enough space to fit the ESP32 as a breakaway module.
+
+
+#### 24/02/2022
+
+18. Changed power MOSFETs for dc/dc on/off control for logic level SOT-23 devices to save PCB space.
+
+
 
 ##### TODO:
 Board is too overloaded to fit everything, there are several courses of action:

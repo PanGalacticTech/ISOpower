@@ -84,6 +84,7 @@ What is Ext. Price on JLC PCB?
 |TL431					|		|SOT23-3	|0.0394		|3000 or 15		|				|C181103	|		|	SMD	 	|			|
 |HEF4093 NAND Gate Shmitt|		|SOIC-14_3.9x8.7x1.27|0.2356|2500 or 1	|				|C7867		|		|	SMD		|			|
 |5032-4P Xtal			|16MHz	|Xtal_SMD_abracon_ABM3C-4p_5.0x3.2|0.4071|1000 or 1|	|C242216	|		|	SMD		|			|
+|MOSFET					|SI2301CDS|SOT-23-3	|0.0941		|	3000 or 15	|				|C10487		|		|	SMD		|	Yes
 
 So far 23 extended components @ $3 each = $69 extra fee for component loading in pick & place machine.
 
@@ -128,7 +129,7 @@ _all distances in mm_
 | Default			|Signal	| 	12	|	5	|		|		|		|		|20	|0.8	| 	0.2		| 0.8	|Default|		|		
 | GND				|Power	|	0	|	0	| 28.83	| 6.16	|		|		|20	|2.5	|	0.2		| 	" 	|Brown 	|Same power requirements as 24V_BUS		|
 | 24V_BUS			|Power	|	30	|	24	| 28.83	| 6.16	|	346	| 147.9	|20	|2.5	|	0.2		|	"	|Red	|24v must be able to provide sum total of all other power bus		|
-| 12V_BUS			|Power	|	12	|	12	| 20.83	| 10.2	|	250	| 122.4	|20	|5		|	0.2		|	"	|Orange	|Imax is @ max power available from DC/DC - Unlikely condition	|
+| 12V_BUS			|Power	|	12	|	12	| 20.83	| 10.2	|	250	| 122.4	|20	|3		|	0.2		|	"	|Orange	|Imax is @ max power available from DC/DC - Unlikely condition	|
 | 5V_BUS			|Power	|	5	|	5	| 16.2	| 4.8	|	81	| 24	|20	|2		|	0.2		|	"	|Yellow	|Imax assumes 6x raspi drawing 2.7A, typical is 0.4-0.8A	|
 | MCU_5V_BUS		|Power	|	5	|	5	| 3		| 0.5	|	15	| 1.5	|20	|1		|	0.2		|	"	|Lime	|max taken from max available from large wall plug USB chargers	|
 | USB_PBUS			|Power	|	"	|	"	| "		|  "	|	"	| " 	|20	|1		|	0.2		|	"	|Aqua	|Same as above Not included in 24v calcs	|
@@ -137,6 +138,7 @@ _all distances in mm_
 | ANALOG			|Analog |	5	|	2.5	| mA   	|  mA	|	n/a	|	n/a	|20	|1		|	0.4		|	"	|Pink	|		|
 
 
+Trace Thicknesses have been modified during routing to account for DRM violations where tracks meet footprint pins.
 
 
 

@@ -1558,7 +1558,7 @@
     (property "Reference" "U18" (id 0) (at 76.2 134.6199 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "TL431DBZ" (id 1) (at 76.2 156.2099 90)
+    (property "Value" "TL431DBZ" (id 1) (at 76.2 137.16 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (id 2) (at 77.47 135.89 0)

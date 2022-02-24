@@ -1,25 +1,9 @@
 {
   "board": {
     "active_layer": 0,
-    "active_layer_preset": "",
+    "active_layer_preset": "Imogen",
     "auto_track_width": true,
-    "hidden_nets": [
-      "GND",
-      "24V_BUS",
-      "/24V_0",
-      "/24V_1",
-      "/Power Outputs/12V_OP_0",
-      "/Power Outputs/12V_OP_1",
-      "/Power Outputs/12V_OP_2",
-      "/Power Outputs/12V_OP_3",
-      "5V_BUS",
-      "/ESP32_Daughterboard/GND",
-      "/Power Outputs/12V_OP_4",
-      "12V_BUS",
-      "/3V3_BUS",
-      "/AtMega328p/ADC5",
-      "/AtMega328p/ADC4"
-    ],
+    "hidden_nets": [],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
