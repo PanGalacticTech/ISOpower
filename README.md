@@ -4,4 +4,6 @@
  
  
  ![image](https://github.com/PanGalacticTech/ISOpower/blob/main/Documentation/Media/ISOpower_PCB_V1.0.png?raw=true)
+ 
+ ![image](https://github.com/PanGalacticTech/ISOpower/blob/main/Documentation/Media/ISOpower_PCB_V1.0_pcbeditor.png?raw=true)
 
