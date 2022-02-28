@@ -2793,18 +2793,6 @@
     (path "/19ab4a26-652e-4198-91bc-8f059a723806"
       (reference "F1") (unit 1) (value "20A") (footprint "Fuse:Fuseholder_Cylinder-5x20mm_Stelvio-Kontek_PTF78_Horizontal_Open")
     )
-    (path "/adda6eb8-8496-4821-8ecb-a66002e822bf/e45fe49e-833b-471a-b3db-dcd97bb02d6c"
-      (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3")
-    )
-    (path "/adda6eb8-8496-4821-8ecb-a66002e822bf/cb32a960-94a5-4c4d-912f-173a7d775389"
-      (reference "H2") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3")
-    )
-    (path "/adda6eb8-8496-4821-8ecb-a66002e822bf/68ebcfb8-e007-44b8-a39d-5f8f730f1d37"
-      (reference "H3") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3")
-    )
-    (path "/adda6eb8-8496-4821-8ecb-a66002e822bf/12e467ea-6eb7-40d3-b0ac-de2461a24ef8"
-      (reference "H4") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3")
-    )
     (path "/adda6eb8-8496-4821-8ecb-a66002e822bf/7559ca32-bdb4-4c20-ab83-dfad22f230f6"
       (reference "H5") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3")
     )
@@ -2822,6 +2810,9 @@
     )
     (path "/adda6eb8-8496-4821-8ecb-a66002e822bf/0303debf-6b2b-42b3-afb2-d3d3bf191d62"
       (reference "H10") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3")
+    )
+    (path "/adda6eb8-8496-4821-8ecb-a66002e822bf/7ead14c3-7362-430a-a510-039801d51281"
+      (reference "H11") (unit 1) (value "2x2_ISOpower_mountingHoles") (footprint "MountingHole:ISOpower_4xmounting_M3")
     )
     (path "/56dbb36e-f625-4b67-908d-684848f2c515"
       (reference "J1") (unit 1) (value "XT60_connector_DC_60A_male") (footprint "Connector_AMASS:AMASS_XT60PW-M")

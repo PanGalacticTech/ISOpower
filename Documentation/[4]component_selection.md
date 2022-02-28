@@ -3,16 +3,47 @@
 _A form to document and record specific part selections and PCB specifications for use during the PCB layout, and with PCB fabrication services like JLC PCB._ 
 
 
-## PCB Layout Process
+## Pre-PCB Layout Process
 
 1. Verify schematic is correct.
 2. Use Reference Designator tool to assign parts numbers to schematic symbols.
 3. Perform Electrical Rules Check - NOTE: There will always be some errors & warnings that are unable to be cleared, this is not a problem as long as each one can be justified for your use case.
 4. Assign footprints, use specified parts & JLCpcb parts library to cross check selected components against suitable item in parts libary. This will ensure that selected part is attainable and cost effective before moving onto layout.
 5. Define net classes in Eschema using [File] > [Schematic Setup] > {Project} -> [Net Classes]. See [Net Classes]() below.
-	- Note: This is only viewable on the schematic for now. Dont Change line thickness, but different colours can be used to make sure net classes are being assigned correctly.
+	- Note: This is only viewable on the schematic for now. Don't change line thickness, but different colours can be used to make sure net classes are being assigned correctly.
 	- When we move into PCB layout we can define the thickness required for each net class.
 6. Open PCB in board editor.
+
+## PCB Layout Process
+
+1. Group components by functional block and move them off to the side. 
+2. Draw PCB outline.
+2. Turn off GND nets using [Appearance] > [Nets] toolbar, as all grounds can connect directly to GND plane on bottom copper layer.
+3. Place all mechanical hardware, I.E Any component that has a specific location to meet operational needs, line up with other PCBs, or enclosures, buttons that may need to be spaced
+	specifically for ergonomic reasons etc.
+4. Arrange functional blocks of components, minimising nets crossing and aiming to get joined pins as close to each other as possible.
+5. Move functional blocks into free space on the PCB, taking care to minismise distances and number of nets that cross each other. This is not a perfect process, and no layout meets idealised
+design parameters. Choose your priorites.
+6. Rearrange components as needed to make the layout more efficient.
+7. Once all components are placed on PCB, start running traces. Prioritise:
+	- 1. High Power traces as they take up more space on the PCB
+	- 2. Single components with a large number of connections (MCUs, large connectors, etc)
+	- 3. Traces which cross large areas of the PCB.
+	Deprioritise:
+	- Short local connections, these will be easy to join later using free layers
+	- Ground connections, any missing at the end can usually be easily joined using a short trace and via to GND plane.
+
+Repeat steps 6 & 7 until all nets except GNDs are joined with copper traces.
+
+8. Use Add Filled Zone tool to fill B.Cu with a GND plane.
+9. Use vias and short traces to join any remaining GND pads to GND plane.
+
+10. Run DRC - Design Rules Check. Expect warnings and errors.
+
+Repeat steps 6 - 10 untill DRC is passed, or errors/warnings can be justified, eg. Soldermask & Silkscreen layers can intersect, however it will throw warnings.
+
+11. Aestheic checks. Using the 3D viewer, ensure that silkscreen layer is legiable and has the information required. Add Text, graphics, anything else required for the correct fabrication.
+
 
 
 ## Component Selections Notes -
@@ -124,7 +155,7 @@ Trace Thickness Assumed to be 0.035mm
 
 _all distances in mm_
 
-| Bus/Bus Class		| Type 	| Vmax	| Vtyp 	| Imax 	| Ityp 	| Pmax	| Ptyp	|dt	|Width	|Clearance	|Vias	|Colour	| Notes |
+| Bus/Net Class		| Type 	| Vmax	| Vtyp 	| Imax 	| Ityp 	| Pmax	| Ptyp	|dt	|Width	|Clearance	|Vias	|Colour	| Notes |
 |----				|----	|----	|----	|----	|----	|----	|----	|---|----	|----		|----	|----	|----	|
 | Default			|Signal	| 	12	|	5	|		|		|		|		|20	|0.8	| 	0.2		| 0.8	|Default|		|		
 | GND				|Power	|	0	|	0	| 28.83	| 6.16	|		|		|20	|2.5	|	0.2		| 	" 	|Brown 	|Same power requirements as 24V_BUS		|
@@ -133,12 +164,26 @@ _all distances in mm_
 | 5V_BUS			|Power	|	5	|	5	| 16.2	| 4.8	|	81	| 24	|20	|2		|	0.2		|	"	|Yellow	|Imax assumes 6x raspi drawing 2.7A, typical is 0.4-0.8A	|
 | MCU_5V_BUS		|Power	|	5	|	5	| 3		| 0.5	|	15	| 1.5	|20	|1		|	0.2		|	"	|Lime	|max taken from max available from large wall plug USB chargers	|
 | USB_PBUS			|Power	|	"	|	"	| "		|  "	|	"	| " 	|20	|1		|	0.2		|	"	|Aqua	|Same as above Not included in 24v calcs	|
-| Data				|Data	|	5	|	2.5	|	n/a	|	n/a	|	n/a	|	n/a	|20	|0.8	|	0.2		|	"	|Purple	|		|
+| Digital				|Data	|	5	|	2.5	|	n/a	|	n/a	|	n/a	|	n/a	|20	|0.8	|	0.2		|	"	|Purple	|		|
 | CURRENT_SENSOR	|Power	|	12	|	12	|20.83	|	10.2|		|		|4	|6		|	0.8		|	"	|Blue	| High Current + Low Temp Rise Required + Heatsink		|
 | ANALOG			|Analog |	5	|	2.5	| mA   	|  mA	|	n/a	|	n/a	|20	|1		|	0.4		|	"	|Pink	|		|
 
 
-Trace Thicknesses have been modified during routing to account for DRM violations where tracks meet footprint pins.
+Trace Thicknesses have been modified during routing to account for DRM violations where tracks meet footprint pins. Updated net classes:
+
+| Bus/Net Class		| Type 	|dt	|Width	|Clearance	|Vias	|Colour	| Notes |
+|----				|----	|---|----	|----		|----	|----	|----	|
+| Default			|Signal	|20	|0.2	| 	0.2		| 0.8	|Default|		|		
+| GND				|Power	|20	|0.8	|	0.2		| 	" 	|Brown 	|Same power requirements as 24V_BUS		|
+| 24V_BUS			|Power	|20	|1.5	|	0.2		|	"	|Red	|24v must be able to provide sum total of all other power bus		|
+| 12V_BUS			|Power	|20	|2		|	0.2		|	"	|Orange	|Imax is @ max power available from DC/DC - Unlikely condition	|
+| 5V_BUS			|Power	|20	|1.5	|	0.2		|	"	|Yellow	|Imax assumes 6x raspi drawing 2.7A, typical is 0.4-0.8A	|
+| MCU_5V_BUS		|Power	|20	|0.17	|	0.2		|	"	|Lime	|max taken from max available from large wall plug USB chargers	|
+| USB_PBUS			|Power	|20	|0.17	|	0.2		|	"	|Aqua	|Same as above Not included in 24v calcs	|
+| DIGITAL			|Data	|20	|0.17	|	0.2		|	"	|Purple	|		|
+|	DIGITAL_GND		|Power	|20	|0.2	|	0.2		|	"	|		|		|
+| CURRENT_SENSOR	|Power	|4	|2.5	|	0.2		|	"	|Blue	| High Current + Low Temp Rise Required + Heatsink		|
+| ANALOG			|Analog |	|0.2	|	0.2		|	"	|Pink	|		|
 
 
 
