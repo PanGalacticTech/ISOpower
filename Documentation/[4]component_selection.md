@@ -151,25 +151,39 @@ _List Net Classes & Specifications. Calculations below if required._
 1oz Copper = ~35 um (0.035mm)
 2oz Copper = ~70 um   
 
-Trace Thickness Assumed to be 0.035mm
+
+
+All trace width calculations assume:
+- Trace Thickness to be 0.070mm
+- External Conductors
+
+ THIS DESIGN REQUIRES 2oz Copper for external layers!
+ 
+ In order to lower the operating temperature, high current BUS will be routed over 2 layers and stiched with vias, however calculations
+ are performed assuming JUST the external conductor layer.
 
 _all distances in mm_
 
+
 | Bus/Net Class		| Type 	| Vmax	| Vtyp 	| Imax 	| Ityp 	| Pmax	| Ptyp	|dt	|Width	|Clearance	|Vias	|Colour	| Notes |
 |----				|----	|----	|----	|----	|----	|----	|----	|---|----	|----		|----	|----	|----	|
-| Default			|Signal	| 	12	|	5	|		|		|		|		|20	|0.8	| 	0.2		| 0.8	|Default|		|		
-| GND				|Power	|	0	|	0	| 28.83	| 6.16	|		|		|20	|2.5	|	0.2		| 	" 	|Brown 	|Same power requirements as 24V_BUS		|
-| 24V_BUS			|Power	|	30	|	24	| 28.83	| 6.16	|	346	| 147.9	|20	|2.5	|	0.2		|	"	|Red	|24v must be able to provide sum total of all other power bus		|
-| 12V_BUS			|Power	|	12	|	12	| 20.83	| 10.2	|	250	| 122.4	|20	|3		|	0.2		|	"	|Orange	|Imax is @ max power available from DC/DC - Unlikely condition	|
-| 5V_BUS			|Power	|	5	|	5	| 16.2	| 4.8	|	81	| 24	|20	|2		|	0.2		|	"	|Yellow	|Imax assumes 6x raspi drawing 2.7A, typical is 0.4-0.8A	|
+| Default			|Signal	| 	12	|	5	|		|		|		|		|20	|0.2	| 	0.2		| 0.8	|Default|		|		
+| GND				|Power	|	0	|	0	|	16	| 6.16	|		|		|20	|2.5	|	0.2		| 	" 	|Brown 	|	|
+| PWR_GND			|Power	| 	0	|	0	| 28.83	|		|	346	|150.9	|20	| 6.5	|	0.2		|		|RedBrown		|Same power requirements as 24V_BUS			|
+|DIGITAL_GND		|Power	|	5	| 	0	|	n/a	|		|		|		|20	|		|			|		|Grey		|		|
+| MID_PWR_BUS		|Power	|		|		|   12	|		|		|		|20	| 3		|x||bright Yellow| For power bus connections near end of long runs - ensure no more than 2 per|
+| 24V_BUS			|Power	|	30	|	24	| 14.4	| 6.16	|	346	| 147.9	|20	|4		|	0.2		|	"	|Red	|24v must be able to provide sum total of all other power bus		|
+| 12V_BUS			|Power	|	12	|	12	| 20.83	| 10.2	|	250	| 122.4	|20	|6.5	|	0.2		|	"	|Orange	|Imax is @ max power available from DC/DC - Unlikely condition	|
+| 5V_BUS			|Power	|	5	|	5	| 16.2	| 4.8	|	81	| 24	|20	|4.6	|	0.2		|	"	|Yellow	|Imax assumes 6x raspi drawing 2.7A, typical is 0.4-0.8A	|
 | MCU_5V_BUS		|Power	|	5	|	5	| 3		| 0.5	|	15	| 1.5	|20	|1		|	0.2		|	"	|Lime	|max taken from max available from large wall plug USB chargers	|
 | USB_PBUS			|Power	|	"	|	"	| "		|  "	|	"	| " 	|20	|1		|	0.2		|	"	|Aqua	|Same as above Not included in 24v calcs	|
-| Digital				|Data	|	5	|	2.5	|	n/a	|	n/a	|	n/a	|	n/a	|20	|0.8	|	0.2		|	"	|Purple	|		|
-| CURRENT_SENSOR	|Power	|	12	|	12	|20.83	|	10.2|		|		|4	|6		|	0.8		|	"	|Blue	| High Current + Low Temp Rise Required + Heatsink		|
-| ANALOG			|Analog |	5	|	2.5	| mA   	|  mA	|	n/a	|	n/a	|20	|1		|	0.4		|	"	|Pink	|		|
+| Digital			|Data	|	5	|	2.5	|	n/a	|	n/a	|	n/a	|	n/a	|20	|0.8	|	0.2		|	"	|Purple	|		|
+| CURRENT_SENSOR	|Power	|	12	|	12	|20.83	|	10.2|		|		|20	|7		|	0.2		|	"	|Blue	| High Current + Low Temp Rise Required + Heatsink		|
+| ANALOG			|Analog |	5	|	2.5	| mA   	|  mA	|	n/a	|	n/a	|20	|1		|	0.2		|	"	|Pink	|		|
+|PWR_OUTPUT			|Power	| 		|		| 8		|		|		|		|20	| 2		|			|		|		|	for one single high current OP	|
 
 
-Trace Thicknesses have been modified during routing to account for DRM violations where tracks meet footprint pins. Updated net classes:
+Trace Thicknesses have been modified during routing to account for DRM violations where tracks meet footprint pins. 
 
 | Bus/Net Class		| Type 	|dt	|Width	|Clearance	|Vias	|Colour	| Notes |
 |----				|----	|---|----	|----		|----	|----	|----	|

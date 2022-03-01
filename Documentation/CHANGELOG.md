@@ -39,21 +39,31 @@ and microcontroller will control shutdown of DC/DC supply if out of spec voltage
 #### 24/02/2022
 
 18. Changed power MOSFETs for dc/dc on/off control for logic level SOT-23 devices to save PCB space.
+19. Successfuly reconfigured board with AtMega MCU on main board, and ESP for wifi functions on removeable module. [^daughterboard]
 
+
+
+### 28/04/2022 DESIGN REVIEW TODO:
+
+Look up thermal management high current pin connections to GND plane
+
+increase track width 7mm for 20degC temp rise with 0.035  @ 20A
+
+24V bus rate for 35A
+
+
+5v bus make sure rated for 15A  @20degC rise
+
+
+practicable io logo
+
+signature
+
+get quote from JLC & PCB way
 
 
 ##### TODO:
-Board is too overloaded to fit everything, there are several courses of action:
 
-1. Remove features.
-2. Pick Smaller components
-3. implment the same features using less components.
-4. daughterboards, requiring carefully cutting nets between sections of the PCB such that it can be re-implemented using pin headers.
-	- Note, the use of hirachical sheets should make this process far easier, with the caviat that the use of Global labels may have made this more difficult.
-	TODO:
-	- Step 1: replace all global power labels in hirarchical sheets with LOCAL net labels. I dont like the use of net labels for joining wires as I beleive it is less clear when
-	reading the schematic, however this avoids the issue of having global labels connect "In the background"
-	- Step 2: Break nets going between main and MCU hirachical sheet, and rejoin them using pin headers.
 
 
 	
@@ -73,7 +83,16 @@ PROBLEM: Suggested 100r resistor between 5v and raspberry pi, this limits curren
 if R=12.5 is selected, Imax would be 400mA, however power disspation in the resistor is now 0.4\*5 = 2W.
 
 
-
+[^daughterboard]: Board is too overloaded to fit everything, there are several courses of action:
+1. Remove features.
+2. Pick Smaller components
+3. implment the same features using less components.
+4. daughterboards, requiring carefully cutting nets between sections of the PCB such that it can be re-implemented using pin headers.
+	- Note, the use of hirachical sheets should make this process far easier, with the caviat that the use of Global labels may have made this more difficult.
+	TODO:
+	- Step 1: replace all global power labels in hirarchical sheets with LOCAL net labels. I dont like the use of net labels for joining wires as I beleive it is less clear when
+	reading the schematic, however this avoids the issue of having global labels connect "In the background"
+	- Step 2: Break nets going between main and MCU hirachical sheet, and rejoin them using pin headers.
 
 
 
