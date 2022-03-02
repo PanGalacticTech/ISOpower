@@ -174,7 +174,7 @@ _all distances in mm_
 | MID_PWR_BUS		|Power	|		|		|   12	|		|		|		|20	| 3		|x||bright Yellow| For power bus connections near end of long runs - ensure no more than 2 per|
 | 24V_BUS			|Power	|	30	|	24	| 14.4	| 6.16	|	346	| 147.9	|20	|4		|	0.2		|	"	|Red	|24v must be able to provide sum total of all other power bus		|
 | 12V_BUS			|Power	|	12	|	12	| 20.83	| 10.2	|	250	| 122.4	|20	|6.5	|	0.2		|	"	|Orange	|Imax is @ max power available from DC/DC - Unlikely condition	|
-| 5V_BUS			|Power	|	5	|	5	| 16.2	| 4.8	|	81	| 24	|20	|4.6	|	0.2		|	"	|Yellow	|Imax assumes 6x raspi drawing 2.7A, typical is 0.4-0.8A	|
+| 5V_BUS			|Power	|	5	|	5	| 16	| 4.8	|	81	| 24	|20	|4.5	|	0.2		|	"	|Yellow	|Imax assumes 6x raspi drawing 2.5A, typical is 0.4-0.8A	|
 | MCU_5V_BUS		|Power	|	5	|	5	| 3		| 0.5	|	15	| 1.5	|20	|1		|	0.2		|	"	|Lime	|max taken from max available from large wall plug USB chargers	|
 | USB_PBUS			|Power	|	"	|	"	| "		|  "	|	"	| " 	|20	|1		|	0.2		|	"	|Aqua	|Same as above Not included in 24v calcs	|
 | Digital			|Data	|	5	|	2.5	|	n/a	|	n/a	|	n/a	|	n/a	|20	|0.8	|	0.2		|	"	|Purple	|		|

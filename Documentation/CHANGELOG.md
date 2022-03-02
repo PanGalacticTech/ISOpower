@@ -41,6 +41,19 @@ and microcontroller will control shutdown of DC/DC supply if out of spec voltage
 18. Changed power MOSFETs for dc/dc on/off control for logic level SOT-23 devices to save PCB space.
 19. Successfuly reconfigured board with AtMega MCU on main board, and ESP for wifi functions on removeable module. [^daughterboard]
 
+#### 02/03/2022
+
+20. Changed 5V power to ACS712 from 5V_BUS to MCU_5v.
+21. Increased size of 12v bus to 6.5mm for <20degC heating at 20A
+22. Increased size of 5v bus to 4.8mm for <20degC heating at 16A
+23. Changed GND pad connections to GND plane to solid
+24. Changed hirachical sheets to include GNDPWR and GND. This make it easier to route different connections using different netclasses to account for different current requirements 
+for each trace. This system seems very imperfect, but I cannot find another workaround.
+25 changed clearance for 12V_BUS and GNDPWR from 0.2mm to 0.1985 - Difference seems negligable but passes DRC.
+
+KiCAD feature suggestion - Net Class Labels. I would like to be able to specifiy that 2 nets are joined at any point, but apply different rules on different parts of the net.
+Current workaround - Manually change the thickness of the traces after routing. Downside: time, care needed., DRC checks? 
+
 
 
 ### 28/04/2022 DESIGN REVIEW TODO:
