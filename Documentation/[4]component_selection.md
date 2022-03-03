@@ -86,7 +86,9 @@ _Components & Parts selection table_
 |Power MOSFET			|IRF5305|TO-263-2	|1.1936		|	50 or 1		| 55.			|C878890	|		|	SMD		|			|
 |NPN BJT				|BC817	| SOT-23	|0.0177		|3000 or 50		| 53.0			|C181151	|		|	SMD		|			|	
 |PNP BJT				|BC807	| SOT-23	|0.0271		|3000 or 50		| 53.0			|C8587		|		|	SMD		|	Yes		|
-|Resistors				| Many	| 0805		|  Does this need to be detailed for the common values? ||||	|			|			|
+|Resistors				|10k	| 0805		| 			|				|				|C17414		|		|			|			|
+|Resistors				|1k		| 0805		| 			|				|				|C17513		|		|			|			|
+|Resistors				|330r	| 0805		| 			|				|				|			|		|			|			|
 |Tactile Switch Pushbutton|SPST	| EVQPE1	|0.0544		| 4000 or 10	|  217.6		|C455280	|		|	SMD		|			|
 |ESP32-WROOM-32U		|		|ESP32-		|4.0605		|	650 or 1	|	2600		|C328062	|		|	SMD		|			|
 |AMS1117-3.3 3V3 LDO	|3V3	| SOT-223-3_TabPin2	|0.1734	|2500		|				|C6186		|		|	SMD		|	Yes		|

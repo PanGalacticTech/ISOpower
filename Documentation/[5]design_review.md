@@ -10,9 +10,9 @@ _A form to document and record the PCB design review after completing layout in 
 3. Will design solve problems?
 
 
-# DRC - Design Rules Check
+## DRC - Design Rules Check
 
-_Note down any DRC failings, their solution or reason for ignoring_
+_Note down any DRC failings, the solution to remove them or reason for ignoring_
 
 #### Errors
 
@@ -27,25 +27,68 @@ _Note down any DRC failings, their solution or reason for ignoring_
  
 4 Footprint has no courtyard
  - Applies to silkscreen logos only - Can be ignored.
+ 
+ 
 
 ## Required Documentation for Fabrication
 
 For PCB Fabrication:
 
-	- Gerber files [^gerber]
+	- Gerber files - In zipped folder [^gerber]
 
 
 For PCB Fabrication, with component population:
 	
-	- Gerber files [^gerber]
+	- Gerber files - in zipped folder [^gerber]
 	- BOM [^1]
 	- CPL Component Placement List / PNP Pick & Place File[^2]
 
 
 
+### Documentation Checklist
+
+|PCB				| Folder		|Files				| Checked 	| Checked Via 	|
+|----				|----			|----				|----		|----			|
+|	ISOpowerPCB		|zipped gerbers	|F_Cu.gbr			|	[]		|				|
+|					|				|In1_Cu.gbr			|	[]		|				|
+|					|				|In2_Cu.gbr			|	[]		|				|
+|					| 				|B_Cu.gbr			|	[]		|				|
+|					|				|F_Mask.gbr			|	[]		|				|
+|					|		 		|B_Mask.gbr			|	[]		|				|
+|					|				|F_Silkscreen.gbr	|	[]		|				|
+|					|				|B_Silkscreen.gbr	|	[]		|				|
+|					| 				|F_Paste.gbr		|	[]		|				|
+|					|				|B_Paste.gbr		|	[]		|				|
+|					| 				|Edge_Cuts.gbr		|	[]		|				|
+|					|				|PTH.drl			|	[]		|				|
+|					|		 		|NPTH.drl			|	[]		|				|
+|					|ISO_power_PCB	| BOM.csv			|	[]		| 			|
+|					|ISO_power_PCB	| top-pos.csv		|	[]		| 				| 
+|----				|----			|----				|	----	|----			|
+|ISOpowerWiFi_PCB	|zipped gerbers	|F_Cu.gbr			|	[]		|				|
+|					|				|In1_Cu.gbr			|	[]		|				|
+|					|				|In2_Cu.gbr			|	[]		|				|
+|					| 				|B_Cu.gbr			|	[]		|				|
+|					|				|F_Mask.gbr			|	[]		|				|
+|					|		 		|B_Mask.gbr			|	[]		|				|
+|					|				|F_Silkscreen.gbr	|	[]		|				|
+|					|				|B_Silkscreen.gbr	|	[]		|				|
+|					| 				|F_Paste.gbr		|	[]		|				|
+|					|				|B_Paste.gbr		|	[]		|				|
+|					| 				|Edge_Cuts.gbr		|	[]		|				|
+|					|				|PTH.drl			|	[]		|				|
+|					|		 		|NPTH.drl			|	[]		|				|
+|					|ISO_wifi_PCB	| BOM.csv			|	[X]		|	All Parts In Stock JLC PCB			|
+|					|ISO_wifi_PCB	| top-pos.csv		|	[X]		|	checked against BOM			|
+|					| 				|					|	[]		|				|
+|					|				|					|	[]		|				|
+
+
 ## Fabrication Notes
 
 - Keep track of Component Stock, is it required for external fabrication, or purchased seperatly for manual assembly?
+
+- JLC offer for free, specific location for their manufacturing number. Specify with "JLCJLCJLCJLC" on the silkscreen level.
 
 
 

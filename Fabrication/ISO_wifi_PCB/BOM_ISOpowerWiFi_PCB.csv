@@ -1,0 +1,27 @@
+Ref,Qnty,Value,Cmp name,Footprint,JLCPCB Part #,Description
+,,,,,,
+"C1, C2, C3, C5, C6, C26, C27, C28, C29, ",9,100n,cap_film_0805,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,C49678,
+,,,,,,
+"D9, ",1,Blue,LED_0805_smd,LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,C138557,Light emitting diode
+,,,,,,
+"J20, ",1,USB_B_Mini,USB_B_Mini,Connector_USB:USB_Mini-B_Lumberg_2486_01_Horizontal,C2681563,USB Mini Type B connector
+,,,,,,
+"Q19, Q20, ",2,BC817,BC817,Package_TO_SOT_SMD:SOT-23,C181151,"0.8A Ic, 45V Vce, NPN Transistor, SOT-23"
+,,,,,,
+"R2, R3, R24, R25, R26, ",5,10k,Resistor_0805,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17414,
+,,,,,,
+"R29, ",1,1k,Resistor_0805,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17513,Resistor
+,,,,,,
+"R30, ",1,330r,Resistor_0805,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17630,Resistor
+,,,,,,
+"SW2, ",1,BOOT,pushbutton_tactile_2pin_SMD,Button_Switch_SMD:SW_SPST_EVQPE1,C455280,MEC 5E single pole normally-open tactile switch
+,,,,,,
+"SW3, ",1,EN,pushbutton_tactile_2pin_SMD,Button_Switch_SMD:SW_SPST_EVQPE1,C455280,MEC 5E single pole normally-open tactile switch
+,,,,,,
+"U1, ",1,ESP32-WROOM-32,ESP32-WROOM-32,RF_Module:ESP32-WROOM-32,C328062,"RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD"
+,,,,,,
+"U2, ",1,AMS1117-3.3,AMS1117-3.3,Package_TO_SOT_SMD:SOT-223-3_TabPin2,C6186,"1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
+,,,,,,
+"U13, ",1,TXS0102DCT,TXS0102DCT,Package_SO:SSOP-8_2.95x2.8mm_P0.65mm,C324082,"2-Bit Bidirectional Voltage-Level Shifter for Open-Drain and Push-Pull Application, SSOP-8"
+,,,,,,
+"U14, ",1,CH340C,CH340C,Package_SO:SOIC-16_3.9x9.9mm_P1.27mm,C84681,"USB serial converter, UART, SOIC-16"
