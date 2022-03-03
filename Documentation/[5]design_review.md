@@ -10,6 +10,23 @@ _A form to document and record the PCB design review after completing layout in 
 3. Will design solve problems?
 
 
+# DRC - Design Rules Check
+
+_Note down any DRC failings, their solution or reason for ignoring_
+
+#### Errors
+
+6 Courtyard overlap Errors
+ - No solution required as conflicting footprint is surface level & unpopulated.
+
+
+#### Warnings
+
+1 Track has unconnected end
+ - Copper layer is acting as heatsink
+ 
+4 Footprint has no courtyard
+ - Applies to silkscreen logos only - Can be ignored.
 
 ## Required Documentation for Fabrication
 
