@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "ISOpower")(type "KiCad")(uri "C:/Users/dheard/Documents/KiCad/Projects/box-power/lib/box_power.pretty")(options "")(descr ""))
+)

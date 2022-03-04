@@ -793,45 +793,11 @@
           "/AtMega328p/USB MCU CH340 Interface A/TxD_A",
           "/BUS_A_DISABLE",
           "/BUS_B_DISABLE",
-          "/ESP32_Daughterboard/Logic Level Conversion/0A",
-          "/ESP32_Daughterboard/Logic Level Conversion/1A",
-          "/ESP32_Daughterboard/SSERIAL_RX",
-          "/ESP32_Daughterboard/SSERIAL_TX",
-          "/ESP32_Daughterboard/USB ESP32 CH340 Interface /ESP_EN",
-          "/ESP32_Daughterboard/USB ESP32 CH340 Interface /ESP_IO0",
-          "/ESP32_Daughterboard/USB ESP32 CH340 Interface /RxD_B",
-          "/ESP32_Daughterboard/USB ESP32 CH340 Interface /TxD_B",
           "/Power Outputs/5v to 12v logic conversion_v2/0_OUT",
           "/Power Outputs/5v to 12v logic conversion_v2/1_OUT",
           "/Power Outputs/5v to 12v logic conversion_v2/2_OUT",
           "/Power Outputs/5v to 12v logic conversion_v2/3_OUT",
-          "/Power Outputs/5v to 12v logic conversion_v2/4_OUT",
-          "18",
-          "19",
-          "23",
-          "4",
-          "5",
-          "Net-(J3-Pad1)",
-          "Net-(J3-Pad2)",
-          "Net-(J3-Pad3)",
-          "Net-(J3-Pad4)",
-          "Net-(J4-Pad1)",
-          "Net-(J4-Pad2)",
-          "Net-(J4-Pad3)",
-          "Net-(J4-Pad4)",
-          "Net-(J4-Pad5)",
-          "Net-(J4-Pad6)",
-          "Net-(J5-Pad1)",
-          "Net-(J5-Pad2)",
-          "Net-(J5-Pad3)",
-          "Net-(J5-Pad4)",
-          "Net-(J5-Pad5)",
-          "Net-(J5-Pad6)",
-          "Net-(J5-Pad7)",
-          "Net-(J5-Pad8)",
-          "Net-(J5-Pad9)",
-          "SCL",
-          "SDA"
+          "/Power Outputs/5v to 12v logic conversion_v2/4_OUT"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(168, 72, 185)",
@@ -850,9 +816,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "DIGITAL_GND",
-        "nets": [
-          "/ESP32_Daughterboard/GND"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(95, 91, 94)",
         "track_width": 0.3,
@@ -893,8 +857,6 @@
         "nets": [
           "/3V3_BUS",
           "/AtMega328p/MCU_5V_BUS",
-          "/ESP32_Daughterboard/3V3_BUS",
-          "/ESP32_Daughterboard/MCU_5V_BUS",
           "MCU_5V",
           "Net-(D3-Pad1)"
         ],
@@ -980,7 +942,6 @@
         "microvia_drill": 0.1,
         "name": "USB_PBUS",
         "nets": [
-          "/ESP32_Daughterboard/USB_PBUS",
           "/USB_PBUS"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
@@ -1059,24 +1020,12 @@
       "AtMega328p"
     ],
     [
-      "f713757b-9076-4778-b29c-f9f0971f0585",
-      "ESP32_Daughterboard"
-    ],
-    [
       "f9ad6110-c54c-46dc-af11-fdacac24e4c9",
       "Power Outputs"
     ],
     [
       "1109cf51-aa55-4d61-a52b-3c3893692869",
       "5v to 12v logic conversion_v2"
-    ],
-    [
-      "330c6a2c-ef5e-4ba5-9203-bd719a2545ac",
-      "Logic Level Conversion"
-    ],
-    [
-      "b86764a3-50e0-4d6c-869d-b8d48d944fad",
-      "USB ESP32 CH340 Interface "
     ],
     [
       "adda6eb8-8496-4821-8ecb-a66002e822bf",
