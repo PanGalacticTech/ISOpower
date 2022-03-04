@@ -4180,7 +4180,7 @@
     (property "Sheetname" "AtMega328p")
     (path "/f811a9bf-1128-4bae-b7e5-2ff69e6cf287/148a063e-8854-4327-bddb-d4d3b5a6480c")
     (attr through_hole)
-    (fp_text reference "J6" (at 1.719511 -1.950489) (layer "F.SilkS")
+    (fp_text reference "J6" (at -0.185489 5.034511) (layer "F.SilkS")
       (effects (font (size 0.7 0.7) (thickness 0.15)))
       (tstamp cb701551-18c7-431a-bcb8-63b379f391c9)
     )
