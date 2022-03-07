@@ -5,17 +5,17 @@
       "Application": "Pcbnew",
       "Version": "(6.0.0)"
     },
-    "CreationDate": "2022-03-07T14:47:04+00:00"
+    "CreationDate": "2022-03-07T15:46:10+00:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "ISOpower",
-      "GUID": "49534f70-6f77-4657-922e-6b696361645f",
+      "Name": "ISOpowerWiFi_PCB",
+      "GUID": "49534f70-6f77-4657-9257-6946695f5043",
       "Revision": "rev?"
     },
     "Size": {
-      "X": 119.48,
-      "Y": 99.16
+      "X": 52.17,
+      "Y": 35.66
     },
     "LayerNumber": 4,
     "BoardThickness": 4.69,
@@ -41,57 +41,57 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "ISOpower-F_Cu.gbr",
+      "Path": "ISOpowerWiFi_PCB-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "ISOpower-In1_Cu.gbr",
+      "Path": "ISOpowerWiFi_PCB-In1_Cu.gbr",
       "FileFunction": "Copper,L2,Inr",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "ISOpower-In2_Cu.gbr",
+      "Path": "ISOpowerWiFi_PCB-In2_Cu.gbr",
       "FileFunction": "Copper,L3,Inr",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "ISOpower-B_Cu.gbr",
+      "Path": "ISOpowerWiFi_PCB-B_Cu.gbr",
       "FileFunction": "Copper,L4,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "ISOpower-F_Paste.gbr",
+      "Path": "ISOpowerWiFi_PCB-F_Paste.gbr",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "ISOpower-B_Paste.gbr",
+      "Path": "ISOpowerWiFi_PCB-B_Paste.gbr",
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "ISOpower-F_Silkscreen.gbr",
+      "Path": "ISOpowerWiFi_PCB-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "ISOpower-B_Silkscreen.gbr",
+      "Path": "ISOpowerWiFi_PCB-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "ISOpower-F_Mask.gbr",
+      "Path": "ISOpowerWiFi_PCB-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "ISOpower-B_Mask.gbr",
+      "Path": "ISOpowerWiFi_PCB-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "ISOpower-Edge_Cuts.gbr",
+      "Path": "ISOpowerWiFi_PCB-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
