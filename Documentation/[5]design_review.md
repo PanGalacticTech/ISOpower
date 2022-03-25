@@ -65,23 +65,22 @@ For PCB Fabrication, with component population:
 |					|ISO_power_PCB	| BOM.csv			|	[]		| 			|
 |					|ISO_power_PCB	| top-pos.csv		|	[]		| 				| 
 |----				|----			|----				|	----	|----			|
-|ISOpowerWiFi_PCB	|zipped gerbers	|F_Cu.gbr			|	[]		|				|
-|					|				|In1_Cu.gbr			|	[]		|				|
-|					|				|In2_Cu.gbr			|	[]		|				|
-|					| 				|B_Cu.gbr			|	[]		|				|
-|					|				|F_Mask.gbr			|	[]		|				|
-|					|		 		|B_Mask.gbr			|	[]		|				|
-|					|				|F_Silkscreen.gbr	|	[]		|				|
-|					|				|B_Silkscreen.gbr	|	[]		|				|
-|					| 				|F_Paste.gbr		|	[]		|				|
-|					|				|B_Paste.gbr		|	[]		|				|
-|					| 				|Edge_Cuts.gbr		|	[]		|				|
-|					|				|PTH.drl			|	[]		|				|
-|					|		 		|NPTH.drl			|	[]		|				|
+|ISOpowerWiFi_PCB	|zipped gerbers	|F_Cu.gbr			|	[X]		|				|
+|					|				|In1_Cu.gbr			|	[X]		|				|
+|					|				|In2_Cu.gbr			|	[X]		|				|
+|					| 				|B_Cu.gbr			|	[X]		|				|
+|					|				|F_Mask.gbr			|	[X]		|				|
+|					|		 		|B_Mask.gbr			|	[X]		|				|
+|					|				|F_Silkscreen.gbr	|	[X]		|				|
+|					|				|B_Silkscreen.gbr	|	[X]		|				|
+|					| 				|F_Paste.gbr		|	[X]		|				|
+|					|				|B_Paste.gbr		|	[X]		|				|
+|					| 				|Edge_Cuts.gbr		|	[X]		|				|
+|					|				|PTH.drl			|	[X]		|				|
+|					|		 		|NPTH.drl			|	[X]		|				|
 |					|ISO_wifi_PCB	| BOM.csv			|	[X]		|	All Parts In Stock JLC PCB			|
 |					|ISO_wifi_PCB	| top-pos.csv		|	[X]		|	checked against BOM			|
-|					| 				|					|	[]		|				|
-|					|				|					|	[]		|				|
+
 
 
 ## Fabrication Notes

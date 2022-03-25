@@ -88,7 +88,7 @@ _Components & Parts selection table_
 |PNP BJT				|BC807	| SOT-23	|0.0271		|3000 or 50		| 53.0			|C8587		|		|	SMD		|	Yes		|
 |Resistors				|10k	| 0805		| 			|				|				|C17414		|		|			|			|
 |Resistors				|1k		| 0805		| 			|				|				|C17513		|		|			|			|
-|Resistors				|330r	| 0805		| 			|				|				|			|		|			|			|
+|Resistors				|330r	| 0805		| 			|				|				|C17630		|		|			|			|
 |Tactile Switch Pushbutton|SPST	| EVQPE1	|0.0544		| 4000 or 10	|  217.6		|C455280	|		|	SMD		|			|
 |ESP32-WROOM-32U		|		|ESP32-		|4.0605		|	650 or 1	|	2600		|C328062	|		|	SMD		|			|
 |AMS1117-3.3 3V3 LDO	|3V3	| SOT-223-3_TabPin2	|0.1734	|2500		|				|C6186		|		|	SMD		|	Yes		|
@@ -100,7 +100,7 @@ _Components & Parts selection table_
 |TL431					|		|SOT23-3	|0.0394		|3000 or 15		|				|C181103	|		|	SMD	 	|			|
 |HEF4093 NAND Gate Shmitt|		|SOIC-14_3.9x8.7x1.27|0.2356|2500 or 1	|				|C7867		|		|	SMD		|			|
 |5032-4P Xtal			|16MHz	|Xtal_SMD_abracon_ABM3C-4p_5.0x3.2|0.4071|1000 or 1|	|C242216	|		|	SMD		|			|
-|MOSFET					|SI2301CDS|SOT-23-3	|0.0941		|	3000 or 15	|				|C10487		|		|	SMD		|	Yes
+|MOSFET					|SI2301CDS|SOT-23-3	|0.0941		|	3000 or 15	|				|C10487		|		|	SMD		|	Yes		|
 
 So far 23 extended components @ $3 each = $69 extra fee for component loading in pick & place machine.
 
@@ -171,8 +171,8 @@ _all distances in mm_
 | Default			|Signal	| 	12	|	5	|		|		|		|		|20	|0.2	| 	0.2		| 0.8	|Default|		|		
 | GND				|Power	|	0	|	0	|	16	| 6.16	|		|		|20	|2.5	|	0.2		| 	" 	|Brown 	|	|
 | PWR_GND			|Power	| 	0	|	0	| 28.83	|		|	346	|150.9	|20	| 6.5	|	0.2		|		|RedBrown		|Same power requirements as 24V_BUS			|
-|DIGITAL_GND		|Power	|	5	| 	0	|	n/a	|		|		|		|20	|0.3		|			|		|Grey		|		|
-| MID_PWR_BUS		|Power	|		|		|   12	|		|		|		|20	| 3		|x||bright Yellow| For power bus connections near end of long runs - ensure no more than 2 per|
+|DIGITAL_GND		|Power	|	5	| 	0	|	n/a	|		|		|		|20	|0.3	|			|		|Grey		|		|
+| MID_PWR_BUS		|Power	|		|		|   12	|		|		|		|20	| 3		|			|		|bright Yellow| For power bus connections near end of long runs - ensure no more than 2 per|
 | 24V_BUS			|Power	|	30	|	24	| 14.4	| 6.16	|	346	| 147.9	|20	|4		|	0.2		|	"	|Red	|24v must be able to provide sum total of all other power bus		|
 | 12V_BUS			|Power	|	12	|	12	| 20.83	| 10.2	|	250	| 122.4	|20	|6.5	|	0.2		|	"	|Orange	|Imax is @ max power available from DC/DC - Unlikely condition	|
 | 5V_BUS			|Power	|	5	|	5	| 16	| 4.8	|	81	| 24	|20	|4.5	|	0.2		|	"	|Yellow	|Imax assumes 6x raspi drawing 2.5A, typical is 0.4-0.8A	|
@@ -225,7 +225,7 @@ Repeat steps 6 & 7 until all nets except GNDs are joined with copper traces.
 
 10. Run DRC - Design Rules Check. Expect warnings and errors.
 
-Repeat steps 6 - 10 untill DRC is passed, or errors/warnings can be justified, eg. Soldermask & Silkscreen layers can intersect, however it will throw warnings.
+Repeat steps 6 - 10 until DRC is passed, or errors/warnings can be justified, eg. Soldermask & Silkscreen layers can intersect, however it will throw warnings.
 
 11. Aestheic checks. Using the 3D viewer, ensure that silkscreen layer is legiable and has the information required. Add Text, graphics, anything else required for the correct fabrication.
 
