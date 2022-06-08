@@ -1,4 +1,18 @@
-19843667663715356
+19845482113349277
+000_Connectors_Immo
+SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, open
+solder jumper open
+0
+2
+2
+000_Connectors_Immo
+SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels
+SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip, labeled with numbers
+net tie solder jumper bridged
+0
+3
+3
 000_Graphics_Immo
 UoE_logo
 
@@ -52324,41 +52338,6 @@ heatsink
 0
 2
 1
-ISOpower
-BarrelJack_Horizontal_DC10B
-DC Barrel Jack
-Power Jack
-0
-3
-3
-ISOpower
-Fan12V_40by10.5mm
-
-
-0
-2
-2
-ISOpower
-Fuseholder_Cylinder-5x20mm_646_series_22.6_1.5
-Fuseholder horizontal open, 5x20mm, 500V, 16A, Schurter 0031.8201, https://us.schurter.com/bundles/snceschurter/epim/_ProdPool_/newDS/en/typ_OGN.pdf
-Fuseholder horizontal open 5x20 Schurter 0031.8201
-0
-2
-2
-ISOpower
-USB_A_Multicomp_horizontal_receptable
-http://www.connfly.com/userfiles/image/UpLoadFile/File/2013/5/6/DS1095.pdf
-USB-A receptacle horizontal through-hole
-0
-6
-5
-ISOpower
-i6A4W-DIP
-
-
-0
-11
-11
 Inductor_SMD
 L_6.3x6.3_H3
 Choke, SMD, 6.3x6.3mm 3mm height
@@ -57035,6 +57014,34 @@ carambola2 8devices
 0
 104
 52
+Module
+DRV8825 Stepper Motor Module
+DRV8825 Stepper Motor Driver Module
+DRV8825 Stepper Motor Driver Module Step Drive
+0
+16
+16
+Module
+Infineon Motor Sheild
+Arduino UNO R3, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+Arduino UNO R3
+0
+37
+37
+Module
+Infineon Motor Sheild hiddenPins
+Infineon Full Bridge Motor Driver Shield
+Infineon Full Bridge Motor Driver Shield DC Motor
+0
+37
+37
+Module
+LM2596S DC-DC Module
+TO-263 / D2PAK / DDPAK SMD package, http://www.infineon.com/cms/en/product/packages/PG-TO263/PG-TO263-5-1/
+D2PAK DDPAK TO-263 D2PAK-5 TO-263-5 SOT-426
+0
+4
+4
 Module
 Maple_Mini
 Maple Mini, http://docs.leaflabs.com/static.leaflabs.com/pub/leaflabs/maple-docs/0.0.12/hardware/maple-mini.html
