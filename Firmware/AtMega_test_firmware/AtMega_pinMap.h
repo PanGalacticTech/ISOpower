@@ -14,7 +14,7 @@
 
 
   
-#define BUS_12V_DISABLE        D2       // HIGH to Disable
+#define BUS_12V_DISABLE        D2       // HIGH to Disable - I Think
 #define BUS_5V_DISABLE         D3       // HIGH to Disable
 #define CH_C                   D4
 
@@ -34,7 +34,7 @@
 
         
 
-// Experimental Output Channels         // HIGH to Disable
+// Experiment Output Channels         // HIGH to Disable- (I Think)
 #define CH_F                  D10
 #define CH_G                  A0
 #define CH_H                  A1

@@ -11,14 +11,14 @@ int16_t bus12v_sample;
 
 int16_t bus5v_sample;
 
-int16_t adcVoltage;
-
-int16_t currentValue;
+int16_t bus_12v_current;
+int16_t but_5v_current;
 
 //Constant Values for ACS712-30A (Can change for different models of board)
-int sensitivity = 66;
-int offsetVoltage = 2500;
+#define SENSITIVITY  66
+#define V_OFFSET  2500
 
+bool newSample;
 
 
 autoDelay sampleDelay;
@@ -30,14 +30,35 @@ void sampleADCs() {
   if (sampleDelay.millisDelay(ADC_SAMPLE_DELAY)) {
     bus12v_sample = analogRead(CURRENT_SENSE_12V);
     bus5v_sample = analogRead(CURRENT_SENSE_5v);
+    newSample = true;
   }
 }
 
 
-void ADCtoVoltage(int16_t adcValue){
-  adcVoltage = (adcValue / 1023) * 5000;
+int16_t ADCtoVoltage(int16_t adcValue) {
+  int16_t adcVoltage = (adcValue / 1023) * 5000;
+  return adcVoltage;
 }
 
-void voltageToCurrent(int16_t adcVoltage){
-  currentValue = ((adcVoltage - offsetVoltage) / sensitivity);
+int16_t voltageToCurrent(int16_t adcVoltage) {
+  int16_t currentValue = ((adcVoltage - V_OFFSET) / SENSITIVITY);
+  return currentValue;
+}
+
+
+
+
+void currentSenseLoop() {
+  sampleADCs();
+  if (newSample) {
+    char buffer[42];
+    bus_12v_current = ADCtoVoltage(bus_12v_sample);
+    bus_12v_current = voltageToCurrent(bus_12v_current);
+    bus_5v_current = ADCtoVoltage(bus_5v_sample);
+    bus_5v_current = voltageToCurrent(bus_5v_current);
+    sprintf(buffer, "12v Bus Current: %i,  5v BUs Current: %i", bus_12v_current, bus_5v_current);
+    Serial.println(buffer);
+  }
+
+
 }
