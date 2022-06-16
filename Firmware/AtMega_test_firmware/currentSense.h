@@ -7,12 +7,12 @@
 */
 
 
-int16_t bus12v_sample;
+int16_t bus_12v_sample;
 
-int16_t bus5v_sample;
+int16_t bus_5v_sample;
 
 int16_t bus_12v_current;
-int16_t but_5v_current;
+int16_t bus_5v_current;
 
 //Constant Values for ACS712-30A (Can change for different models of board)
 #define SENSITIVITY  66
@@ -28,8 +28,8 @@ autoDelay sampleDelay;
 
 void sampleADCs() {
   if (sampleDelay.millisDelay(ADC_SAMPLE_DELAY)) {
-    bus12v_sample = analogRead(CURRENT_SENSE_12V);
-    bus5v_sample = analogRead(CURRENT_SENSE_5v);
+    bus_12v_sample = analogRead(CURRENT_SENSE_12V);
+    bus_5v_sample = analogRead(CURRENT_SENSE_5V);
     newSample = true;
   }
 }

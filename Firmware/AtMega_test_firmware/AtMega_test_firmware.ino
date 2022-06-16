@@ -19,22 +19,6 @@
 
 
 
-void setup() {
-  ISOpowerBegin(115200);
-  changeChannelState(0, HIGH);
-  enable12vBus(true);
-  enable5vBus(true;
-  flashLED();
-
-}
-
-
-
-
-
-void loop() {
-  currentSenseLoop();
-}
 
 
 
@@ -50,7 +34,7 @@ void ISOpowerBegin(int32_t baudrate = 115200) {
   pinMode(BUS_5V_DISABLE, OUTPUT);
   pinMode(LED_PIN, OUTPUT);
 
-  for (int i = 0, i < 5, i++) {
+  for (int i = 0; i < 5; i++) {
     pinMode(outputChannels[i], OUTPUT);
   }
   //Inputs
@@ -87,4 +71,22 @@ void flashLED() {
   delay(1000);
   digitalWrite(LED_PIN, LOW);
   delay(2000);
+}
+
+
+void setup() {
+  ISOpowerBegin(115200);
+  changeChannelState(0, HIGH);
+  enable12vBus(true);
+  enable5vBus(true);
+  flashLED();
+
+}
+
+
+
+
+
+void loop() {
+  currentSenseLoop();
 }
