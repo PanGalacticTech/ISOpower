@@ -1,12 +1,12 @@
 /*  ISO Power AtMega Test Firmware
 
 
-     Basic program to test IO Functions and verify PCB is correct
+    Basic program to test IO Functions and verify PCB is correct
 
-     Imogen Wren
-     08/06/2022
+    Imogen Wren
+    08/06/2022
 
-    Compile software for Arduino Nano 16MHz
+   Compile software for Arduino Nano 16MHz
 */
 
 
@@ -45,7 +45,7 @@ void ISOpowerBegin(int32_t baudrate = 115200) {
 
 
 void changeChannelState(int16_t channelNumber, bool state) {
-  digitalWrite(outputChannels[channelNumber], state);
+  digitalWrite(outputChannels[channelNumber], !state);
 }
 
 void enable12vBus(bool enable) {
@@ -67,18 +67,43 @@ void enable5vBus(bool enable) {
 
 
 void flashLED() {
-  digitalWrite(LED_PIN, HIGH);
-  delay(1000);
-  digitalWrite(LED_PIN, LOW);
-  delay(2000);
+  int loops = 6;
+  while (loops > 0) {
+    digitalWrite(LED_PIN, HIGH);
+    delay(100);
+    digitalWrite(LED_PIN, LOW);
+    delay(200);
+    loops--;
+  }
 }
+
+
+
+void sendByte(uint8_t someData) {
+  Serial.println(someData);
+}
+
+
+void startListen() {
+  char buffer[64];
+  int intBuffer;
+  if (Serial.available() > 0) {
+    intBuffer = Serial.read();
+    Serial.println(intBuffer);
+  }
+}
+
 
 
 void setup() {
   ISOpowerBegin(115200);
   changeChannelState(0, HIGH);
-  enable12vBus(true);
-  enable5vBus(true);
+  changeChannelState(1, HIGH);
+  changeChannelState(2, HIGH);
+  changeChannelState(3, HIGH);
+  changeChannelState(4, HIGH);
+  enable12vBus(false);
+  enable5vBus(false);
   flashLED();
 
 }
@@ -86,7 +111,19 @@ void setup() {
 
 
 
+autoDelay txDelay;
+#define TX_PERIOD 1
 
 void loop() {
-  currentSenseLoop();
+//  currentSenseLoop();
+  startListen();
+  
+ // if (rxVal != 0) {
+ //   Serial.println(rxVal);
+ // }
+
+  if (txDelay.secondsDelay(TX_PERIOD)) {
+  sendByte(7);
+  }
+
 }
