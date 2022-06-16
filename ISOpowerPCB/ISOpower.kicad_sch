@@ -1024,6 +1024,7 @@
   (no_connect (at 193.04 133.35) (uuid 4d1a15b0-bc68-4442-ba63-86e7bf34d976))
   (no_connect (at 193.04 138.43) (uuid 4d1a15b0-bc68-4442-ba63-86e7bf34d977))
   (no_connect (at 193.04 140.97) (uuid 4d1a15b0-bc68-4442-ba63-86e7bf34d978))
+  (no_connect (at 130.81 53.34) (uuid bb6fe2a7-f753-4483-b7dd-61cf059c9bd0))
 
   (wire (pts (xy 100.33 27.94) (xy 100.33 34.29))
     (stroke (width 0) (type default) (color 0 0 0 0))
