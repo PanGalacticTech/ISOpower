@@ -1,36 +1,19 @@
-int inByte = 0;
-char test_string[10]= "UART_TEST";
-int target = 7;
 
-void ISOwifiBegin(int32_t baudrate = 115200) {
-  Serial.begin(baudrate);
-  Serial.print("ISO Wifi Test Firmware");
-} 
-  
+#define RXD2 16
+#define TXD2 17
+
+
 void setup() {
-  // start serial port at 9600 bps:
+  // Note the format for setting a serial port is as follows: Serial2.begin(baud-rate, protocol, RX pin, TX pin);
   Serial.begin(115200);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-
-  pinMode(2, INPUT);   // digital sensor is on digital pin 2
-  establishContact();  // send a byte to establish contact until receiver responds
+  //Serial1.begin(9600, SERIAL_8N1, RXD2, TXD2);
+  Serial2.begin(115200, SERIAL_8N1, RXD2, TXD2);
+  Serial.println("Serial Txd is on pin: "+String(TX));
+  Serial.println("Serial Rxd is on pin: "+String(RX));
 }
 
-
-
-
-void loop() {
-  // if we get a valid byte, read analog ins:
-  if (Serial.available() > 0) {
-    // get incoming byte:
-    inByte = Serial.read();
+void loop() { //Choose Serial1 or Serial2 as required
+  while (Serial2.available()) {
+    Serial.print(char(Serial2.read()));
   }
-}
-void establishContact() {
-  if (inByte == target) {
-    Serial.print('Test Passed');   // send a capital A
-    delay(300);
-  } 
 }
