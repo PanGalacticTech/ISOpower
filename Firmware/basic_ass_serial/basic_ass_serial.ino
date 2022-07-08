@@ -1,6 +1,6 @@
 
 
-#define LED_PIN               7  
+#define LED_PIN               7
 
 void setup() {
   Serial.begin(115200);
