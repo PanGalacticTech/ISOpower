@@ -7,6 +7,11 @@
     08/06/2022
 
    Compile software for Arduino Nano 16MHz
+
+
+   To Program Remove Wifi Header and use   
+
+   
 */
 
 
@@ -116,14 +121,14 @@ autoDelay txDelay;
 
 void loop() {
 //  currentSenseLoop();
-  startListen();
+ //startListen();
   
  // if (rxVal != 0) {
  //   Serial.println(rxVal);
  // }
 
-  if (txDelay.secondsDelay(TX_PERIOD)) {
-  sendByte(7);
-  }
+///  if (txDelay.secondsDelay(TX_PERIOD)) {
+ // sendByte(7);
+ // }
 
 }
