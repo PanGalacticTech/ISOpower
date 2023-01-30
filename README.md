@@ -5,6 +5,12 @@
 
 ## Use
 
+### Programming [See Issues]
+ To Program AtMega328pb use the following settings:
+ ![image](https://user-images.githubusercontent.com/97303986/215501065-3e046d87-5a4b-4112-b600-7a21c6165ee1.png)
+
+ 
+
 ### prog_power_select
 
 - Jumper is used for power routing during programming
