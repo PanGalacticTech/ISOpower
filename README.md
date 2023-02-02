@@ -19,7 +19,7 @@
 
 
 
-## Issues
+## Issues V1.0
 
 1. Tx & Rx Pin swapped on CH340 - aTmeGA328P
  - To enable USB communication, reverse pins 2 & 3
