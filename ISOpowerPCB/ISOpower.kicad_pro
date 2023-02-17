@@ -1,5 +1,6 @@
 {
   "board": {
+    "3dviewports": [],
     "design_settings": {
       "defaults": {
         "board_outline_line_width": 0.09999999999999999,
@@ -423,7 +424,8 @@
           161
         ]
       }
-    ]
+    ],
+    "viewports": []
   },
   "boards": [],
   "cvpcb": {
@@ -671,9 +673,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "12V_BUS",
-        "nets": [
-          "12V_BUS"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(214, 128, 31)",
         "track_width": 6.5,
@@ -691,11 +691,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "24V_BUS",
-        "nets": [
-          "/24V_0",
-          "/24V_1",
-          "24V_BUS"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(200, 31, 33)",
         "track_width": 4.0,
@@ -713,10 +709,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "5V_BUS",
-        "nets": [
-          "/Power Distribution/5V_I_SENSE_IP",
-          "5V_BUS"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(193, 182, 20)",
         "track_width": 4.5,
@@ -734,12 +727,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "ANALOG",
-        "nets": [
-          "/AtMega328p/ADC4",
-          "/AtMega328p/ADC5",
-          "/BUS_I_SENSE_A",
-          "/BUS_I_SENSE_B"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(255, 49, 178)",
         "track_width": 0.2,
@@ -757,9 +745,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "CURRENT_SENSOR",
-        "nets": [
-          "/Power Distribution/12V_I_SENSE_IP"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(80, 84, 255)",
         "track_width": 7.0,
@@ -777,28 +763,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "DIGITAL",
-        "nets": [
-          "/12V_BUS_MONITOR",
-          "/5V_BUS_MONITOR",
-          "/AtMega328p/CH_C",
-          "/AtMega328p/CH_F",
-          "/AtMega328p/CH_G",
-          "/AtMega328p/CH_H",
-          "/AtMega328p/CH_I",
-          "/AtMega328p/CH_J",
-          "/AtMega328p/SSERIAL_RX",
-          "/AtMega328p/SSERIAL_TX",
-          "/AtMega328p/USB MCU CH340 Interface A/DTR_A",
-          "/AtMega328p/USB MCU CH340 Interface A/RxD_A",
-          "/AtMega328p/USB MCU CH340 Interface A/TxD_A",
-          "/BUS_A_DISABLE",
-          "/BUS_B_DISABLE",
-          "/Power Outputs/5v to 12v logic conversion_v2/0_OUT",
-          "/Power Outputs/5v to 12v logic conversion_v2/1_OUT",
-          "/Power Outputs/5v to 12v logic conversion_v2/2_OUT",
-          "/Power Outputs/5v to 12v logic conversion_v2/3_OUT",
-          "/Power Outputs/5v to 12v logic conversion_v2/4_OUT"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(168, 72, 185)",
         "track_width": 0.2,
@@ -834,9 +799,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "GND",
-        "nets": [
-          "GND"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(108, 79, 1)",
         "track_width": 1.5,
@@ -854,12 +817,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "MCU_5V_BUS",
-        "nets": [
-          "/3V3_BUS",
-          "/AtMega328p/MCU_5V_BUS",
-          "MCU_5V",
-          "Net-(D3-Pad1)"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(155, 222, 16)",
         "track_width": 0.3,
@@ -877,9 +835,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "MID_PWR_BUS",
-        "nets": [
-          "/Power Outputs/MID_PWR"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(255, 255, 32)",
         "track_width": 3.0,
@@ -897,9 +853,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "PWR_GND",
-        "nets": [
-          "GNDPWR"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(188, 29, 36)",
         "track_width": 7.0,
@@ -917,13 +871,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "PWR_OUTPUT",
-        "nets": [
-          "/Power Outputs/12V_OP_0",
-          "/Power Outputs/12V_OP_1",
-          "/Power Outputs/12V_OP_2",
-          "/Power Outputs/12V_OP_3",
-          "/Power Outputs/12V_OP_4"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(176, 255, 20)",
         "track_width": 2.0,
@@ -941,9 +889,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "USB_PBUS",
-        "nets": [
-          "/USB_PBUS"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(52, 217, 159)",
         "track_width": 0.3,
@@ -955,7 +901,186 @@
     "meta": {
       "version": 2
     },
-    "net_colors": null
+    "net_colors": null,
+    "netclass_assignments": null,
+    "netclass_patterns": [
+      {
+        "netclass": "12V_BUS",
+        "pattern": "12V_BUS"
+      },
+      {
+        "netclass": "24V_BUS",
+        "pattern": "/24V_0"
+      },
+      {
+        "netclass": "24V_BUS",
+        "pattern": "/24V_1"
+      },
+      {
+        "netclass": "24V_BUS",
+        "pattern": "24V_BUS"
+      },
+      {
+        "netclass": "5V_BUS",
+        "pattern": "/Power Distribution/5V_I_SENSE_IP"
+      },
+      {
+        "netclass": "5V_BUS",
+        "pattern": "5V_BUS"
+      },
+      {
+        "netclass": "ANALOG",
+        "pattern": "/AtMega328p/ADC4"
+      },
+      {
+        "netclass": "ANALOG",
+        "pattern": "/AtMega328p/ADC5"
+      },
+      {
+        "netclass": "ANALOG",
+        "pattern": "/BUS_I_SENSE_A"
+      },
+      {
+        "netclass": "ANALOG",
+        "pattern": "/BUS_I_SENSE_B"
+      },
+      {
+        "netclass": "CURRENT_SENSOR",
+        "pattern": "/Power Distribution/12V_I_SENSE_IP"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/12V_BUS_MONITOR"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/5V_BUS_MONITOR"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/CH_C"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/CH_F"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/CH_G"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/CH_H"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/CH_I"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/CH_J"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/SSERIAL_RX"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/SSERIAL_TX"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/USB MCU CH340 Interface A/DTR_A"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/USB MCU CH340 Interface A/RxD_A"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/AtMega328p/USB MCU CH340 Interface A/TxD_A"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/BUS_A_DISABLE"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/BUS_B_DISABLE"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/Power Outputs/5v to 12v logic conversion_v2/0_OUT"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/Power Outputs/5v to 12v logic conversion_v2/1_OUT"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/Power Outputs/5v to 12v logic conversion_v2/2_OUT"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/Power Outputs/5v to 12v logic conversion_v2/3_OUT"
+      },
+      {
+        "netclass": "DIGITAL",
+        "pattern": "/Power Outputs/5v to 12v logic conversion_v2/4_OUT"
+      },
+      {
+        "netclass": "GND",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "MCU_5V_BUS",
+        "pattern": "/3V3_BUS"
+      },
+      {
+        "netclass": "MCU_5V_BUS",
+        "pattern": "/AtMega328p/MCU_5V_BUS"
+      },
+      {
+        "netclass": "MCU_5V_BUS",
+        "pattern": "MCU_5V"
+      },
+      {
+        "netclass": "MCU_5V_BUS",
+        "pattern": "Net-(D3-Pad1)"
+      },
+      {
+        "netclass": "MID_PWR_BUS",
+        "pattern": "/Power Outputs/MID_PWR"
+      },
+      {
+        "netclass": "PWR_GND",
+        "pattern": "GNDPWR"
+      },
+      {
+        "netclass": "PWR_OUTPUT",
+        "pattern": "/Power Outputs/12V_OP_0"
+      },
+      {
+        "netclass": "PWR_OUTPUT",
+        "pattern": "/Power Outputs/12V_OP_1"
+      },
+      {
+        "netclass": "PWR_OUTPUT",
+        "pattern": "/Power Outputs/12V_OP_2"
+      },
+      {
+        "netclass": "PWR_OUTPUT",
+        "pattern": "/Power Outputs/12V_OP_3"
+      },
+      {
+        "netclass": "PWR_OUTPUT",
+        "pattern": "/Power Outputs/12V_OP_4"
+      },
+      {
+        "netclass": "USB_PBUS",
+        "pattern": "/USB_PBUS"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -971,6 +1096,8 @@
   "schematic": {
     "annotate_start_num": 0,
     "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0,
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
@@ -1002,7 +1129,11 @@
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_adjust_passive_values": false,
+    "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
+    "spice_save_all_currents": false,
+    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
