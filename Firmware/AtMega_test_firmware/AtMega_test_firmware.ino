@@ -9,9 +9,9 @@
    Compile software for Arduino Nano 16MHz
 
 
-   To Program Remove Wifi Header and use   
+   To Program Remove Wifi Header and use
 
-   
+
 */
 
 
@@ -71,8 +71,8 @@ void enable5vBus(bool enable) {
 }
 
 
-void flashLED() {
-  int loops = 6;
+void flashLED(int no_loops = 6) {
+  int loops = no_loops;
   while (loops > 0) {
     digitalWrite(LED_PIN, HIGH);
     delay(100);
@@ -109,7 +109,9 @@ void setup() {
   changeChannelState(4, HIGH);
   enable12vBus(false);
   enable5vBus(false);
-  flashLED();
+  flashLED(2);
+  delay(500);
+  flashLED(3);
 
 }
 
@@ -120,15 +122,15 @@ autoDelay txDelay;
 #define TX_PERIOD 1
 
 void loop() {
-//  currentSenseLoop();
- //startListen();
-  
- // if (rxVal != 0) {
- //   Serial.println(rxVal);
- // }
+  //  currentSenseLoop();
+  //startListen();
 
-///  if (txDelay.secondsDelay(TX_PERIOD)) {
- // sendByte(7);
- // }
+  // if (rxVal != 0) {
+  //   Serial.println(rxVal);
+  // }
+
+  ///  if (txDelay.secondsDelay(TX_PERIOD)) {
+  // sendByte(7);
+  // }
 
 }
